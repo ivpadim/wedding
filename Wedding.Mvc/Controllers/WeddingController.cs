@@ -18,7 +18,6 @@ namespace Wedding.Mvc.Controllers
         {
             ViewBag.Message = "Your Wishes";
             return View();
-        }
-        
+        }        
     }
 }
