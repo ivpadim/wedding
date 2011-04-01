@@ -1,0 +1,154 @@
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Helpers.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Helpers.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Mvc.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Razor.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Razor.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Deployment.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Deployment.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Razor.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Razor.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Wedding.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Wedding.Mvc.pdb
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\RuntimeSetup.Manifest
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\Diagnostics.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\IISConfigurator.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\msshrtmi.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\mswasr.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\mswasri.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaHostBootstrapper.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaIISHost.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaRuntimeProxy.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaWebHost.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaWorkerHost.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\EtwListener.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\FileListener.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonAgent.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonAgentHost.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonDiagnostics.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonEvents.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonNetTransport.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonQuery.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\MonTables.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\secutil.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\SysCounterListener.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\SystemEventsListener.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\schema\1.0\ma.xsd
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\schema\1.0\maStatic.xsd
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\schema\1.0\query.xsd
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x86\monitor\schema\1.0\shared.xsd
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\__entrypoint.txt
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaIISHost.exe.config
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\Diagnostics.csplugin
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\DiagnosticsAgent.exe
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\mswapd.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\RoleModel.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\ServiceDefinition.build.rd
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\ServiceDefinition.build.rdsc
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\ServiceDefinition.build.csdef
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Helpers.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Helpers.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Mvc.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Razor.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Razor.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Wedding.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Wedding.Mvc.pdb
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Microsoft.Web.Infrastructure.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Microsoft.Web.Infrastructure.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Helpers.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Helpers.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Mvc.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Mvc.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Razor.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.Razor.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Deployment.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Deployment.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Razor.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.Razor.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\System.Web.WebPages.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Wedding.Mvc.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Wedding.Mvc.pdb
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\RuntimeSetup.Manifest
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\Diagnostics.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\IISConfigurator.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\msshrtmi.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\mswasr.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\mswasri.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\WaHostBootstrapper.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\WaIISHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\WaRuntimeProxy.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\WaWebHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\WaWorkerHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\Diagnostics.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\IISConfigurator.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\msshrtmi.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\mswasr.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\mswasri.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaHostBootstrapper.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaIISHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaRuntimeProxy.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaWebHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x86\WaWorkerHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\EtwListener.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\FileListener.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonAgent.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonAgentHost.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonDiagnostics.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonEvents.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonNetTransport.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonQuery.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\MonTables.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\secutil.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\SysCounterListener.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\SystemEventsListener.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\schema\1.0\ma.xsd
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\schema\1.0\maStatic.xsd
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\schema\1.0\query.xsd
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\diagnostics\x64\monitor\schema\1.0\shared.xsd
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\__entrypoint.txt
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\base\x64\WaIISHost.exe.config
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\Diagnostics.csplugin
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\DiagnosticsAgent.exe
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\Microsoft.WindowsAzure.StorageClient.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\plugins\Diagnostics\mswapd.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\RoleModel.xml
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\ServiceDefinition.build.rd
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\ServiceDefinition.build.rdsc
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\ServiceDefinition.build.csdef
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\ResolveAssemblyReference.cache
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Helpers.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Helpers.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Mvc.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Mvc.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Razor.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.Razor.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Wedding.Mvc.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Wedding.Mvc.pdb

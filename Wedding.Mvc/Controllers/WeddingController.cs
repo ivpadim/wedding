@@ -13,5 +13,11 @@ namespace Wedding.Mvc.Controllers
             ViewBag.Message = "Wedding page";
             return View();
         }
+
+        public ActionResult YourWishes()
+        {
+            ViewBag.Message = "Your Wishes";
+            return View();
+        }
     }
 }
