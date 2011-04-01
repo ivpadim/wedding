@@ -19,5 +19,11 @@ namespace Wedding.Mvc.Controllers
             ViewBag.Message = "Your Wishes";
             return View();
         }
+
+        public ActionResult PhotoAlbum()
+        {
+            ViewBag.Message = "Photo Album";
+            return View();
+        }
     }
 }
