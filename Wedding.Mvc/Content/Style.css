@@ -1,0 +1,411 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body
+{
+    background: #FFFFFF;
+    text-align: center;
+}
+
+img
+{
+    vertical-align: top;
+}
+a img
+{
+    border: 0;
+}
+
+ul
+{
+    list-style: none;
+}
+
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.clear
+{
+    clear: both;
+}
+
+.alignright
+{
+    text-align: right;
+}
+.aligncenter
+{
+    text-align: center;
+}
+
+html, input, textarea
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.73em;
+    line-height: 1.2em;
+    color: #414141;
+}
+
+input, select
+{
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+a
+{
+    color: #E4484B;
+    outline: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+p
+{
+    padding-top: 18px;
+}
+
+/* ============================= main layout ====================== */
+
+li
+{
+    padding-left: 30px;
+    line-height: 2em;
+}
+li a
+{
+    color: #E4484B;
+}
+
+.imgindent
+{
+    margin: 0 20px 0 0;
+    float: left;
+}
+
+html, body
+{
+    height: 100%;
+}
+#wrapper
+{
+    position: relative;
+}
+
+#btn-up
+{
+    position: fixed;
+    top: 235px;
+    right: 0px;
+    width: 70px;
+    height: 36px;
+    z-index: 10;
+}
+
+h2
+{
+    font-size: 2.266em;
+    line-height: 1.2307em;
+    color: #121212;
+    padding: 0 0 6px 0;
+    margin-bottom: 26px;
+}
+.h2-margin
+{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E0E0E0;
+    border-spacing: 2px;
+}
+
+
+/* ============================= header ====================== */
+#header
+{
+    position: relative;
+}
+.logo
+{
+    width: 270px;
+    padding: 21px 140px 0 0;
+}
+
+.logo .title
+{
+    float: left;
+    font-size: 8em;
+    font-weight: bold;
+    color: #121212;
+    padding: 0 0 0px 0;
+}
+
+.logo .amp
+{
+    float: right;
+    font-size: 22em;
+    font-weight: 900;
+    color: #E4484B;
+    margin: -20px 0 10px 0;
+}
+.menu
+{
+    float: left;
+    width: 350px;
+    padding-top: 80px;
+}
+.menu .left
+{
+}
+.menu .right
+{
+}
+.menu li
+{
+    background: none;
+    font-size: 2.33em;
+    line-height: 1.2307em;
+}
+.menu li a
+{
+    color: #121212;
+    text-decoration: none;
+}
+.menu li a:hover, .menu .active a
+{
+    color: #E4484B;
+}
+/* ============================= content ====================== */
+#content
+{
+    position: relative;
+}
+.indent
+{
+    padding: 42px 0 65px 0;
+}
+.padding
+{
+    padding-bottom: 75px;
+}
+
+.col-pad
+{
+    padding-right: 16px;
+}
+
+.col-pad1
+{
+    padding-right: 34px;
+}
+.col-indent
+{
+    padding-right: 16px;
+}
+
+.link
+{
+    display: inline-block;
+    color: #E4484B;
+    line-height: 2.13em;
+    margin-top: 24px;
+    padding-left: 43px;
+}
+.link-margin
+{
+    margin-top: 36px;
+}
+
+.title
+{
+    display: inline-block;
+    color: #fff;
+    font-size: 1.133em;
+    float: left;
+}
+.title strong
+{
+    display: inline-block;
+    padding: 0 17px 0 17px;
+}
+.title strong strong
+{
+    padding: 10px 0 0 4px;
+    height: 26px;
+    background: #E4484B;
+}
+
+.title1
+{
+    color: #000;
+    font-size: 1.2em;
+    margin: 10px 0 0 10px;
+    display: block;
+    width: 38px;
+    float: left;
+    line-height: 1em;
+}
+
+.title2
+{
+    color: #121212;
+    font-weight: bold;
+}
+
+.font
+{
+    padding-top: 8px;
+    color: #8d8d8d;
+    font-size: 0.866em;
+    line-height: 1.24em;
+}
+
+.pad
+{
+    padding-top: 39px;
+}
+.pad1
+{
+    padding-top: 8px;
+}
+.pad2
+{
+    padding-top: 16px;
+}
+.pad3
+{
+    padding-top: 30px;
+}
+
+.slider
+{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.slider .wrapper
+{
+    width: 100%;
+    overflow: auto;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Width below is max for Opera */
+.slider .wrapper ul
+{
+    width: 5520px;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    margin: 0;
+}
+.slider ul li
+{
+    display: block;
+    float: left;
+    padding: 0;
+    height: 463px;
+    width: 920px;
+    margin: 0;
+}
+.slider .arrow
+{
+    display: none;
+}
+.slider .forward
+{
+    display: none;
+}
+.slider .back
+{
+    display: block;
+}
+
+#thumbNav
+{
+    position: absolute;
+    left: 104px;
+    bottom: 42px;
+    text-align: center;
+}
+#thumbNav a
+{
+    color: #E4484B;
+    display: inline-block;
+    height: 19px;
+    width: 19px;
+    font-size: 0;
+    margin: 0 5px 0 0;
+    background: url(Images/pagination-a-bg.gif) left top no-repeat;
+    text-align: center;
+}
+#thumbNav a.cur
+{
+    background: url(Images/pagination-a-bg-hover.gif) left top no-repeat;
+    color: #fff;
+}
+
+#start-stop
+{
+    background: url(Images/stop-buton.gif) left top no-repeat;
+    color: #fff;
+    padding: 7px 0px 0 0;
+    width: 97px;
+    height: 29px;
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4em;
+    font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+}
+#start-stop.playing
+{
+    background: url(Images/stop-buton.gif) left top no-repeat;
+}
+#start-stop:hover
+{
+    background: url(Images/stop-buton.gif) left top no-repeat;
+}
+
+/*
+  Prevents
+*/
+.slider .wrapper ul ul
+{
+    position: static;
+    margin: 0;
+    background: none;
+    overflow: visible;
+    width: auto;
+    border: 0;
+}
+.slider .wrapper ul ul li
+{
+    float: none;
+    height: auto;
+    width: auto;
+    background: none;
+}
+
+.footer
+{
+    text-align: center;
+    line-height: normal;
+    font-size: 1em;
+}

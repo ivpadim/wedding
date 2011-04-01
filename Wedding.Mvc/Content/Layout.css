@@ -1,0 +1,45 @@
+﻿.main
+{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px 0 50px;
+    text-align: left;
+}
+
+.header
+{
+}
+
+.content
+{
+    padding-bottom: 3px;
+}
+
+.footer
+{
+    width: 860px;
+    border-top: 1px solid #E0E0E0;
+    border-spacing: 2px;
+    padding-top: 10px;
+}
+
+.col-1, .col-2, .col-3
+{
+    float: left;
+}
+
+.container
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+#page-about .col-1
+{
+    width: 296px;
+}
+#page-about .col-2
+{
+    width: 590px;
+    margin-left: 10px;
+}

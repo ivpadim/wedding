@@ -1,0 +1,38 @@
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\Wedding.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\Wedding.Mvc.pdb
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.pdb
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.Helpers.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.Mvc.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.Razor.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.WebPages.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.Mvc.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.Razor.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.WebPages.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.Helpers.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Users\IPADRON\Documents\Visual Studio 2010\Projects\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Wedding.Mvc.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Wedding.Mvc.pdb
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.Helpers.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.Mvc.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.Razor.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Deployment.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Razor.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Microsoft.Web.Infrastructure.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.Mvc.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.Razor.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.Helpers.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Deployment.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Razor.xml
+C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\ResolveAssemblyReference.cache
+C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.dll
+C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.pdb
