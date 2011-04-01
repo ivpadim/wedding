@@ -8,6 +8,7 @@ namespace Wedding.Mvc.Controllers
 {
     public class WeddingController : Controller
     {
+        
         public ActionResult Index()
         {
             ViewBag.Message = "Wedding page";
@@ -18,6 +19,11 @@ namespace Wedding.Mvc.Controllers
         {
             ViewBag.Message = "Your Wishes";
             return View();
-        }        
+        }
+        
+        public ActionResult PhotoAlbum()
+        {
+            return View();
+        }
     }
 }
