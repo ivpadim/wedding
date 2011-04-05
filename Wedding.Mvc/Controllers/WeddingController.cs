@@ -23,6 +23,7 @@ namespace Wedding.Mvc.Controllers
         
         public ActionResult PhotoAlbum()
         {
+            ViewBag.Message = "Photo Album";
             return View();
         }
     }
