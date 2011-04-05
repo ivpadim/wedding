@@ -152,3 +152,7 @@ C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.W
 C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\System.Web.WebPages.xml
 C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Wedding.Mvc.dll
 C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Wedding.Mvc.pdb
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Proyectos\Wedding\Wedding.CloudService\bin\Debug\Wedding.CloudService.csx\roles\Wedding.Mvc\approot\bin\Microsoft.WindowsAzure.StorageClient.xml
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\bin\Microsoft.WindowsAzure.StorageClient.xml

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="86e52db2-80b0-4833-aea2-77f9a60be75d" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="bddef69c-c47f-4e86-b5f3-644b79c4cd02" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="Wedding.CloudServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -23,6 +23,11 @@
         <aCS name="Wedding.Mvc:?StartupTaskDebugger?" defaultValue="">
           <maps>
             <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:?StartupTaskDebugger?" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:DataConnectionString" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:DataConnectionString" />
           </maps>
         </aCS>
         <aCS name="Wedding.Mvc:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="">
@@ -59,6 +64,11 @@
             <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/?StartupTaskDebugger?" />
           </setting>
         </map>
+        <map name="MapWedding.Mvc:DataConnectionString" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/DataConnectionString" />
+          </setting>
+        </map>
         <map name="MapWedding.Mvc:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
@@ -80,6 +90,7 @@
               <aCS name="?IsSimulationEnvironment?" defaultValue="" />
               <aCS name="?RoleHostDebugger?" defaultValue="" />
               <aCS name="?StartupTaskDebugger?" defaultValue="" />
+              <aCS name="DataConnectionString" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;Wedding.Mvc&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;Wedding.Mvc&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
             </settings>
@@ -99,9 +110,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="50331acb-a429-442b-91c0-43e4c5a3c95f" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
+    <implementation Id="46264c0c-2bb7-45fc-aa0f-afb5436c1882" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="050acf2d-22fe-4791-9f04-064cdf28fc73" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="dcf32acd-8c4c-4ffb-ab84-6a38917b11e5" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc:Endpoint1" />
           </inPort>

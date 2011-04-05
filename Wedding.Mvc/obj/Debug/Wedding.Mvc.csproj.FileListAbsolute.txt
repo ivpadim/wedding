@@ -36,3 +36,5 @@ C:\Proyectos\Wedding\Wedding.Mvc\bin\System.Web.WebPages.Razor.xml
 C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\ResolveAssemblyReference.cache
 C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.dll
 C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.pdb
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Microsoft.WindowsAzure.StorageClient.xml
