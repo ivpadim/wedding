@@ -1,8 +1,24 @@
 ﻿using System;
 using Microsoft.WindowsAzure.StorageClient;
+using System.ComponentModel.DataAnnotations;
 
 namespace Wedding.Mvc.Models
 {
+
+    public class LoginModel
+    {
+        [Required]
+        [Display(Name = "User name")]
+        public string Account { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
+    }
+
     public class User : TableServiceEntity
     {
         public string Account { get; set; }

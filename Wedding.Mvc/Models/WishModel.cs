@@ -3,7 +3,6 @@ using Microsoft.WindowsAzure.StorageClient;
 
 namespace Wedding.Mvc.Models
 {
-
     public class Wish : TableServiceEntity
     {
         public string Account { get; set; }
