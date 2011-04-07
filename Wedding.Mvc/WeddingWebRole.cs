@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.StorageClient;
@@ -23,6 +24,7 @@ namespace Wedding.Mvc
                     Email = RoleEnvironment.GetConfigurationSettingValue("AdminEmail"),
                     FirstName = RoleEnvironment.GetConfigurationSettingValue("AdminFirstName"),
                     LastName = RoleEnvironment.GetConfigurationSettingValue("AdminLastName"),
+                    LastLogin = new DateTime(1900,1,1),
                     Role = "Administrator"
                 };
                 context.AddObject("Users", admin);
