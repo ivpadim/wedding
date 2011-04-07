@@ -93,6 +93,7 @@
     <Compile Include="WeddingWebRole.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\buton.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\pagination-a-bg-hover.gif" />
     <Content Include="Content\Images\pagination-a-bg.gif" />
@@ -166,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Account\LogIn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LogIn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LogOut.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

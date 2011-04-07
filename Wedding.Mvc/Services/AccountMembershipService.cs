@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Security;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using Microsoft.WindowsAzure.StorageClient;
+using Wedding.Mvc.Models;
 
 namespace Wedding.Mvc.Services
 {
@@ -14,24 +19,15 @@ namespace Wedding.Mvc.Services
 
     public class AccountMembershipService : IMembershipService
     {
-        private readonly MembershipProvider _provider;
 
         public AccountMembershipService()
-            : this(null)
         {
         }
 
-        public AccountMembershipService(MembershipProvider provider)
-        {
-            _provider = provider ?? Membership.Provider;
-        }
 
         public int MinPasswordLength
         {
-            get
-            {
-                return _provider.MinRequiredPasswordLength;
-            }
+            get { return 6; }
         }
 
         public bool ValidateUser(string userName, string password)
@@ -39,7 +35,39 @@ namespace Wedding.Mvc.Services
             if (String.IsNullOrEmpty(userName)) throw new ArgumentException("Value cannot be null or empty.", "userName");
             if (String.IsNullOrEmpty(password)) throw new ArgumentException("Value cannot be null or empty.", "password");
 
-            return _provider.ValidateUser(userName, password);
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var adminEmail = RoleEnvironment.GetConfigurationSettingValue("AdminEmail");
+            var adminPassword = RoleEnvironment.GetConfigurationSettingValue("AdminPassword");
+
+            if (userName == adminEmail)
+            {
+                return adminEmail == userName && adminPassword == password;
+            }
+            else
+            {
+                var userAuth = context.CreateQuery<User>("Users")
+                                        .Where(user => user.PartitionKey == "wedding" &&
+                                                                     user.Email == userName &&
+                                                                     user.Password == password)
+                                        .FirstOrDefault();
+
+                return userAuth != null;
+            }
+        }
+
+        public void UpdateLastLogin(string userName)
+        {
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+            var user = context.CreateQuery<User>("Users")
+                                    .Where(u => u.PartitionKey == "wedding" &&
+                                                           u.Email == userName)
+                                    .First();
+            user.LastLogin = DateTime.Now;
+            context.UpdateObject(user);
+            context.SaveChangesWithRetries();
         }
 
         public MembershipCreateStatus CreateUser(string userName, string password, string email)
@@ -48,8 +76,8 @@ namespace Wedding.Mvc.Services
             if (String.IsNullOrEmpty(password)) throw new ArgumentException("Value cannot be null or empty.", "password");
             if (String.IsNullOrEmpty(email)) throw new ArgumentException("Value cannot be null or empty.", "email");
 
-            MembershipCreateStatus status;
-            _provider.CreateUser(userName, password, email, null, null, true, null, out status);
+            MembershipCreateStatus status = MembershipCreateStatus.UserRejected;
+            //_provider.CreateUser(userName, password, email, null, null, true, null, out status);
             return status;
         }
 
@@ -63,8 +91,9 @@ namespace Wedding.Mvc.Services
             // than return false in certain failure scenarios.
             try
             {
-                MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
-                return currentUser.ChangePassword(oldPassword, newPassword);
+                //MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
+                //return currentUser.ChangePassword(oldPassword, newPassword);
+                return false;
             }
             catch (ArgumentException)
             {

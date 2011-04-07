@@ -11,7 +11,7 @@ namespace Wedding.Mvc.Models
         public DateTime PublishDate { get; set; }
 
         public Wish()
-            : base("wishes", (DateTime.MaxValue - DateTime.UtcNow).Ticks.ToString("d19") + Guid.NewGuid().ToString())
+            : base("wedding", (DateTime.MaxValue - DateTime.UtcNow).Ticks.ToString("d19") + Guid.NewGuid().ToString())
         {
 
         }

@@ -8,7 +8,7 @@ namespace Wedding.Mvc.Controllers
     public class AccountController : Controller
     {
         public IFormsAuthenticationService FormsService { get; set; }
-        public IMembershipService MembershipService { get; set; }
+        public AccountMembershipService MembershipService { get; set; }
 
 
         protected override void Initialize(RequestContext requestContext)
@@ -27,15 +27,32 @@ namespace Wedding.Mvc.Controllers
         [HttpPost]
         public ActionResult LogIn(LoginModel model, string returnUrl)
         {
-            if (Url.IsLocalUrl(returnUrl))
+            if (ModelState.IsValid)
             {
-                return Redirect(returnUrl);
+                if (MembershipService.ValidateUser(model.Account, model.Password))
+                {
+                    this.MembershipService.UpdateLastLogin(model.Account);
+                    this.FormsService.SignIn(model.Account, model.RememberMe);
+                    if (Url.IsLocalUrl(returnUrl))
+                        return Redirect(returnUrl);
+                    else
+                        return RedirectToAction("Index", "Home");
+                }
+                else
+                    ModelState.AddModelError("", "the user name or password provided is incorrect.");
             }
-            else
-            {
-                return RedirectToAction("Index", "Home");
-            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
         }
+
+        public ActionResult LogOff()
+        {
+            FormsService.SignOut();
+
+            return RedirectToAction("Index", "Home");
+        }
+
 
     }
 }

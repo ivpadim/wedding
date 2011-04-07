@@ -15,6 +15,12 @@
     padding-bottom: 3px;
 }
 
+.welcome
+{
+    font-size:1.1em;
+    text-align:right;
+}
+
 .footer
 {
     width: 860px;
@@ -42,4 +48,22 @@
 {
     width: 590px;
     margin-left: 10px;
+}
+
+
+#page-contact .col-1
+{
+    width: 296px;
+}
+#page-contact .col-2
+{
+    width: 590px;
+    margin-left: 10px;
+}
+
+
+#page-login
+{
+    margin-top:-100px;
+    margin-left:450px;
 }

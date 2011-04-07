@@ -8,14 +8,15 @@ namespace Wedding.Mvc.Models
     public class LoginModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "user name")]
         public string Account { get; set; }
 
         [Required]
+        [Display(Name="password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "remember me?")]
         public bool RememberMe { get; set; }
     }
 
@@ -26,9 +27,10 @@ namespace Wedding.Mvc.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Role { get; set; }
+        public DateTime LastLogin { get; set; }
 
         public User()
-            : base("users", (DateTime.MaxValue - DateTime.UtcNow).Ticks.ToString("d19") + Guid.NewGuid().ToString())
+            : base("wedding", (DateTime.MaxValue - DateTime.UtcNow).Ticks.ToString("d19") + Guid.NewGuid().ToString())
         {
 
         }
