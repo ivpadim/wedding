@@ -88,6 +88,8 @@
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\WishModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AccountMembershipService.cs" />
+    <Compile Include="Services\FormsAuthenticationService.cs" />
     <Compile Include="WeddingWebRole.cs" />
   </ItemGroup>
   <ItemGroup>

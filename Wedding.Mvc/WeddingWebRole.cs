@@ -1,6 +1,8 @@
-﻿using Microsoft.WindowsAzure;
+﻿using System.Linq;
+using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.StorageClient;
+using Wedding.Mvc.Models;
 
 namespace Wedding.Mvc
 {
@@ -9,8 +11,23 @@ namespace Wedding.Mvc
         public override bool OnStart()
         {
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
-            account.CreateCloudTableClient().CreateTableIfNotExist("Wishes");
-            account.CreateCloudTableClient().CreateTableIfNotExist("Users");
+
+            var wishesCreated = account.CreateCloudTableClient().CreateTableIfNotExist("Wishes");
+            var usersCreated = account.CreateCloudTableClient().CreateTableIfNotExist("Users");
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+            
+            if (usersCreated)
+            {
+                var admin = new User
+                {
+                    Email = RoleEnvironment.GetConfigurationSettingValue("AdminEmail"),
+                    FirstName = RoleEnvironment.GetConfigurationSettingValue("AdminFirstName"),
+                    LastName = RoleEnvironment.GetConfigurationSettingValue("AdminLastName"),
+                    Role = "Administrator"
+                };
+                context.AddObject("Users", admin);
+                context.SaveChangesWithRetries();
+            }
             return base.OnStart();
         }
     }

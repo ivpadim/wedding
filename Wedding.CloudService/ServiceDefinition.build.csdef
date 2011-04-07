@@ -25,6 +25,10 @@
     </Imports>
     <ConfigurationSettings>
       <Setting name="DataConnectionString" />
+      <Setting name="AdminEmail" />
+      <Setting name="AdminFirstName" />
+      <Setting name="AdminLastName" />
+      <Setting name="AdminPassword" />
     </ConfigurationSettings>
   </WebRole>
 </ServiceDefinition>

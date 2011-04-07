@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="a8191d09-2bb6-45b8-b093-b4e990212224" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="6faf6d83-e1dc-4ddc-a966-dfc469d718c9" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="Wedding.CloudServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -23,6 +23,26 @@
         <aCS name="Wedding.Mvc:?StartupTaskDebugger?" defaultValue="">
           <maps>
             <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:?StartupTaskDebugger?" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:AdminEmail" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:AdminEmail" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:AdminFirstName" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:AdminFirstName" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:AdminLastName" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:AdminLastName" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:AdminPassword" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:AdminPassword" />
           </maps>
         </aCS>
         <aCS name="Wedding.Mvc:DataConnectionString" defaultValue="">
@@ -64,6 +84,26 @@
             <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/?StartupTaskDebugger?" />
           </setting>
         </map>
+        <map name="MapWedding.Mvc:AdminEmail" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/AdminEmail" />
+          </setting>
+        </map>
+        <map name="MapWedding.Mvc:AdminFirstName" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/AdminFirstName" />
+          </setting>
+        </map>
+        <map name="MapWedding.Mvc:AdminLastName" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/AdminLastName" />
+          </setting>
+        </map>
+        <map name="MapWedding.Mvc:AdminPassword" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/AdminPassword" />
+          </setting>
+        </map>
         <map name="MapWedding.Mvc:DataConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/DataConnectionString" />
@@ -90,6 +130,10 @@
               <aCS name="?IsSimulationEnvironment?" defaultValue="" />
               <aCS name="?RoleHostDebugger?" defaultValue="" />
               <aCS name="?StartupTaskDebugger?" defaultValue="" />
+              <aCS name="AdminEmail" defaultValue="" />
+              <aCS name="AdminFirstName" defaultValue="" />
+              <aCS name="AdminLastName" defaultValue="" />
+              <aCS name="AdminPassword" defaultValue="" />
               <aCS name="DataConnectionString" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;Wedding.Mvc&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;Wedding.Mvc&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
@@ -110,9 +154,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="63db72c7-a1a2-4259-9e07-c8efa0d86904" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
+    <implementation Id="db4b1310-6b2c-43be-a6fc-794392196ff8" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="b2278e7e-0c74-485d-812c-f39809ce0556" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="2bc71bb7-eb76-4fee-a963-116d5f0d3d7a" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc:Endpoint1" />
           </inPort>
