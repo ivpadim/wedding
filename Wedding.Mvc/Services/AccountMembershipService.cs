@@ -16,7 +16,7 @@ namespace Wedding.Mvc.Services
     public class AccountMembershipService : IMembershipService
     {
 
-        public User User { get; set; }
+        public UserData User { get; set; }
 
         public bool AuthenticateUser(string userName, string password)
         {
@@ -26,7 +26,7 @@ namespace Wedding.Mvc.Services
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
 
-            var userAuth = context.CreateQuery<User>("Users")
+            var userAuth = context.CreateQuery<UserData>("Users")
                         .Where(user => user.PartitionKey == "wedding" &&
                                                      user.Email == userName &&
                                                      user.Password == password)

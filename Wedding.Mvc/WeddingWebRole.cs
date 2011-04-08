@@ -19,7 +19,7 @@ namespace Wedding.Mvc
             
             if (usersCreated)
             {
-                var admin = new User
+                var admin = new UserData
                 {
                     Email = RoleEnvironment.GetConfigurationSettingValue("AdminEmail"),
                     FirstName = RoleEnvironment.GetConfigurationSettingValue("AdminFirstName"),

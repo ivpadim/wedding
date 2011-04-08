@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="89c422cc-163d-4451-9fc0-c6a450b0d146" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="8a0cb9a9-c450-487a-b6e6-5a744ba04c2c" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="Wedding.CloudServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -154,9 +154,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="c1b6d794-f755-4277-b4aa-1feaba77b8d3" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
+    <implementation Id="dbb872dd-155e-4828-b14b-e9b87ea0c4d8" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="7a525593-1eba-4f81-a19b-a117640517d2" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="fb6ce17f-a410-4578-ac0f-f0c9b348dbd7" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc:Endpoint1" />
           </inPort>

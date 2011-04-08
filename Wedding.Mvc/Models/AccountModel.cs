@@ -22,7 +22,7 @@ namespace Wedding.Mvc.Models
         public bool RememberMe { get; set; }
     }
 
-    public class User : TableServiceEntity
+    public class UserData : TableServiceEntity
     {
         public string Email { get; set; }
         public string Password { get; set; }
@@ -31,16 +31,16 @@ namespace Wedding.Mvc.Models
         public string Role { get; set; }
         public DateTime LastLogin { get; set; }
 
-        public User()
+        public UserData()
             : base("wedding", (DateTime.MaxValue - DateTime.UtcNow).Ticks.ToString("d19") + Guid.NewGuid().ToString())
         {
 
         }
 
-        public static User FromString(string stringData)
+        public static UserData FromString(string stringData)
         {
             string[] properties = stringData.Split('|');
-            return new User
+            return new UserData
             {
                 Email = properties[0],
                 FirstName = properties[1],
@@ -97,7 +97,7 @@ namespace Wedding.Mvc.Models
 
         public bool IsInRole(string role)
         {
-            return User.FromString(_identity.Ticket.UserData).Role == role;
+            return UserData.FromString(_identity.Ticket.UserData).Role == role;
         }
     }
 }

@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure.StorageClient;
 using Wedding.Mvc.Models;
 using System.Xml.Serialization;
 using System.IO;
+using System.Runtime.Remoting.Contexts;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -21,7 +22,7 @@ namespace Wedding.Mvc.Controllers
             return View();
         }
 
-        [Authorize] 
+        [Authorize]
         public ActionResult YourWishes()
         {
             ViewBag.Message = "Your Wishes";
@@ -34,14 +35,35 @@ namespace Wedding.Mvc.Controllers
             return View(query);
         }
 
-        
+
+        [HttpPost]
+        public ActionResult AddWish(string comment)
+        {
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var userPrincipal = HttpContext.User as UserPrincipal;
+            var userIdentity = userPrincipal.Identity as UserIdentity;
+            var userData = UserData.FromString(userIdentity.Ticket.UserData);
+
+            var wish = new Wish();
+            wish.Account = userData.Email;
+            wish.From = userData.FirstName + " " + userData.LastName;
+            wish.Message = comment;
+            wish.PublishDate = DateTime.Now;
+
+            context.AddObject("Wishes", wish);
+            context.SaveChangesWithRetries();
+
+            return RedirectToAction("YourWishes");
+        }
 
 
         [Authorize]
         public ActionResult PhotoAlbum()
         {
             ViewBag.Message = "Photo Album";
-            
+
             return View();
         }
     }

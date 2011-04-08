@@ -3,6 +3,19 @@
     ViewBag.Title = "Your Wishes";
     Layout = "~/Views/Shared/_Layout.cshtml"; ;
 }
+<script type="text/javascript">
+    function OnFailure() {
+        alert("Failure");
+    }
+
+    function OnSuccess() {
+        alert("Success");
+    }
+
+    function OnComplete() {
+        alert("Complete");
+    }
+</script>
 <div id="page-wishes">
     <div class="col-1">
         <h2 class="h2-margin">
@@ -31,13 +44,20 @@
             </p>
             <br />
             <br />
-            @using (Html.BeginForm("AddWish", "Wedding", FormMethod.Post, new { id = "addwish" }))
+            @using (Ajax.BeginForm("AddWish", new AjaxOptions
+            {
+                UpdateTargetId = "comment",
+                OnSuccess = "OnSucess",
+                OnFailure = "OnFailure",
+                OnComplete = "OnComplete"
+            }))
             {   
-                <textarea id="comment" class="add-wish" rows="6" cols="1" onkeypress="if(this.value.length>250)return false;"></textarea>                
+                @Html.TextArea("comment", new { @class = "add-wish", rows = "6", cols = "1", onkeypress = "if(this.value.length>250)return false;", onblur = "if(this.value.length>250)this.value=this.value.substr(0,250);" })
                 <div class="alignright">
-                    <a href="#" class="link" onclick="document.getElementById('addwish').reset()">Reset</a>
-                    <a href="#" class="link" onclick="document.getElementById('addwish').submit()">Enviar</a>
+                    <a href="#" class="link" onclick="$('#comment').text('');return false;">Reset</a>
+                    <a href="#" class="link" onclick="$('#submit').click();return false;">Enviar</a>
                 </div>
+                <button id="submit" type="submit" style="visibility: hidden" />
             }
         </div>
     </div>
