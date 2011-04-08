@@ -20,6 +20,8 @@ namespace Wedding.Mvc.Services
     public class AccountMembershipService : IMembershipService
     {
 
+        public User User { get; set; }
+
         public AccountMembershipService()
         {
         }
@@ -38,38 +40,28 @@ namespace Wedding.Mvc.Services
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
 
-            var adminEmail = RoleEnvironment.GetConfigurationSettingValue("AdminEmail");
-            var adminPassword = RoleEnvironment.GetConfigurationSettingValue("AdminPassword");
+            var userAuth = context.CreateQuery<User>("Users")
+                        .Where(user => user.PartitionKey == "wedding" &&
+                                                     user.Email == userName &&
+                                                     user.Password == password)
+                        .SingleOrDefault();
 
-            if (userName == adminEmail)
+            if (userAuth != null)
             {
-                return adminEmail == userName && adminPassword == password;
+                userAuth.LastLogin = DateTime.Now;
+                context.UpdateObject(userAuth);
+                context.SaveChangesWithRetries();
+
+                User = userAuth;
+                return true;
             }
             else
             {
-                var userAuth = context.CreateQuery<User>("Users")
-                                        .Where(user => user.PartitionKey == "wedding" &&
-                                                                     user.Email == userName &&
-                                                                     user.Password == password)
-                                        .FirstOrDefault();
-
-                return userAuth != null;
+                return false;
             }
         }
 
-        public void UpdateLastLogin(string userName)
-        {
-            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
-            var context = account.CreateCloudTableClient().GetDataServiceContext();
-            var user = context.CreateQuery<User>("Users")
-                                    .Where(u => u.PartitionKey == "wedding" &&
-                                                           u.Email == userName)
-                                    .First();
-            user.LastLogin = DateTime.Now;
-            context.UpdateObject(user);
-            context.SaveChangesWithRetries();
-        }
-
+        
         public MembershipCreateStatus CreateUser(string userName, string password, string email)
         {
             if (String.IsNullOrEmpty(userName)) throw new ArgumentException("Value cannot be null or empty.", "userName");

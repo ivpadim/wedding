@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
+using Wedding.Mvc.Models;
 
 namespace Wedding.Mvc
 {
@@ -33,6 +34,23 @@ namespace Wedding.Mvc
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            this.PostAuthenticateRequest += Application_PostAuthenticateRequest;
         }
+
+        protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
+        {
+            if (HttpContext.Current.User.Identity.IsAuthenticated &&
+                HttpContext.Current.User.Identity.AuthenticationType == "Forms")
+            {
+                var formsIdentity = HttpContext.Current.User.Identity as FormsIdentity;
+                var customIdentity = new UserIdentity() { Ticket = formsIdentity.Ticket };
+                var customPrincipal = new UserPrincipal(customIdentity);
+
+                HttpContext.Current.User = customPrincipal;
+                Thread.CurrentPrincipal = customPrincipal;
+            }
+        }
+
     }
 }

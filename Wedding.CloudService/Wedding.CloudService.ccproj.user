@@ -10,8 +10,8 @@
     <DeploymentIncludeIntellitrace>False</DeploymentIncludeIntellitrace>
     <DeploymentEnableWebDeploy>False</DeploymentEnableWebDeploy>
     <DeploymentStorageService>ivpadim</DeploymentStorageService>
-    <DeploymentStorageServiceLabel>Storage Service</DeploymentStorageServiceLabel>
-    <DeploymentLabel>Wedding.CloudService - 3/24/2011 2:03:46 AM</DeploymentLabel>
+    <DeploymentStorageServiceLabel>ivpadim</DeploymentStorageServiceLabel>
+    <DeploymentLabel>Wedding.CloudService - 4/7/2011 4:45:22 AM</DeploymentLabel>
     <DeploymentPromptBeforeDeleting>False</DeploymentPromptBeforeDeleting>
   </PropertyGroup>
 </Project>

@@ -24,6 +24,7 @@ namespace Wedding.Mvc
                     Email = RoleEnvironment.GetConfigurationSettingValue("AdminEmail"),
                     FirstName = RoleEnvironment.GetConfigurationSettingValue("AdminFirstName"),
                     LastName = RoleEnvironment.GetConfigurationSettingValue("AdminLastName"),
+                    Password = RoleEnvironment.GetConfigurationSettingValue("AdminPassword"),
                     LastLogin = new DateTime(1900,1,1),
                     Role = "Administrator"
                 };
