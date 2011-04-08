@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\buton.gif" />
+    <Content Include="Content\Images\link-bg.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\pagination-a-bg-hover.gif" />
     <Content Include="Content\Images\pagination-a-bg.gif" />
@@ -103,6 +104,9 @@
     <Content Include="Content\Images\slide4.jpg" />
     <Content Include="Content\Images\slide5.jpg" />
     <Content Include="Content\Images\stop-buton.gif" />
+    <Content Include="Content\Images\title-left-bg.gif" />
+    <Content Include="Content\Images\title-right-bg.gif" />
+    <Content Include="Content\Images\wish-tile.jpg" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\Images\up-btn.gif" />
     <Content Include="Global.asax" />
@@ -160,9 +164,6 @@
     <Content Include="Views\Shared\_OnActiveLink.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Wedding\YourWishes.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Wedding\PhotoAlbum.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_LogOut.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Wedding\YourWishes.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

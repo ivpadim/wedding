@@ -29,9 +29,10 @@ namespace Wedding.Mvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (this.MembershipService.ValidateUser(model.Account, model.Password))
+                if (this.MembershipService.AuthenticateUser(model.Account, model.Password))
                 {
                     this.FormsService.SignIn(model.Account, model.RememberMe, this.MembershipService.User.ToString());
+
                     if (Url.IsLocalUrl(returnUrl))
                         return Redirect(returnUrl);
                     else
@@ -48,8 +49,7 @@ namespace Wedding.Mvc.Controllers
         public ActionResult LogOff()
         {
             FormsService.SignOut();
-
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
 
 

@@ -17,7 +17,7 @@
       <Setting name="AdminEmail" value="ivpadim@gmail.com" />
       <Setting name="AdminFirstName" value="Ivan" />
       <Setting name="AdminLastName" value="Padron" />
-      <Setting name="AdminPassword" value="firemen" />
+      <Setting name="AdminPassword" value="android" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

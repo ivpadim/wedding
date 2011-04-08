@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using Microsoft.WindowsAzure.StorageClient;
+using Wedding.Mvc.Models;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -15,17 +21,27 @@ namespace Wedding.Mvc.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize] 
         public ActionResult YourWishes()
         {
             ViewBag.Message = "Your Wishes";
-            return View();
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var query = context.CreateQuery<Wish>("Wishes")
+                                .Where(w => w.PartitionKey == "wedding");
+
+            return View(query);
         }
+
+        
+
 
         [Authorize]
         public ActionResult PhotoAlbum()
         {
             ViewBag.Message = "Photo Album";
+            
             return View();
         }
     }

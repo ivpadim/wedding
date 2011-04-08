@@ -1,6 +1,44 @@
-﻿@{
-    ViewBag.Title = "Your wishes";
+﻿@model IEnumerable<Wedding.Mvc.Models.Wish>
+@{
+    ViewBag.Title = "Your Wishes";
+    Layout = "~/Views/Shared/_Layout.cshtml"; ;
 }
-<h2>@ViewBag.Message</h2>
-<p>
-</p>
+<div id="page-wishes">
+    <div class="col-1">
+        <h2 class="h2-margin">
+            Your wishes</h2>
+        @foreach (var item in Model)
+        {
+            <div class="wish">
+                <div class="container">
+                    <strong class="title"><strong><strong>@item.From</strong></strong></strong> <strong
+                        class="title1">Said:</strong>
+                </div>
+                <div class="font">
+                    @item.Message
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-2">
+        <h2 class="h2-margin">
+            Add your wish</h2>
+        <div class="container">
+            <img src="@Url.Content("~/Content/Images/wish-tile.jpg")"  alt="" />
+            <p class="font">
+                En este apartado puedes compartirnos cualquier deseo que tengas para esta nueva
+                etapa de nuestras vidas. GRACIAS POR TU AMISTAD.
+            </p>
+            <br />
+            <br />
+            @using (Html.BeginForm("AddWish", "Wedding", FormMethod.Post, new { id = "addwish" }))
+            {   
+                <textarea id="comment" class="add-wish" rows="6" cols="1" onkeypress="if(this.value.length>250)return false;"></textarea>                
+                <div class="alignright">
+                    <a href="#" class="link" onclick="document.getElementById('addwish').reset()">Reset</a>
+                    <a href="#" class="link" onclick="document.getElementById('addwish').submit()">Enviar</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

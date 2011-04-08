@@ -62,6 +62,16 @@
 }
 
 
+#page-wishes .col-1
+{
+    width: 596px;
+}
+#page-wishes .col-2
+{
+    width: 280px;
+    margin-left: 10px;
+}
+
 #page-login
 {
     margin-top:-100px;

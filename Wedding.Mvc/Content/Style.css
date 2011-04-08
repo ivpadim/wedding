@@ -69,7 +69,7 @@ input, select
 
 a
 {
-    color: #E4484B;
+    color: #FF0054;
     outline: none;
 }
 a:hover
@@ -90,7 +90,7 @@ li
 }
 li a
 {
-    color: #E4484B;
+    color: #FF0054;
 }
 
 .imgindent
@@ -160,7 +160,7 @@ h2
     float: right;
     font-size: 22em;
     font-weight: 900;
-    color: #E4484B;
+    color: #FF0054;
     margin: -20px 0 10px 0;
 }
 .menu
@@ -188,7 +188,7 @@ h2
 }
 .menu li a:hover, .menu .active a
 {
-    color: #E4484B;
+    color: #FF0054;
 }
 /* ============================= content ====================== */
 #content
@@ -220,11 +220,14 @@ h2
 
 .link
 {
+    background: url(Images/link-bg.gif) left 0px no-repeat;
     display: inline-block;
-    color: #E4484B;
+    color: #FF0054;
     line-height: 2.13em;
     margin-top: 24px;
-    padding-left: 43px;
+    margin-left:10px;
+    padding-left: 40px;
+    padding-bottom:10px;
 }
 .link-margin
 {
@@ -234,6 +237,7 @@ h2
 .title
 {
     display: inline-block;
+    background: url(Images/title-left-bg.gif) left top no-repeat;
     color: #fff;
     font-size: 1.133em;
     float: left;
@@ -241,19 +245,20 @@ h2
 .title strong
 {
     display: inline-block;
+    background: url(Images/title-right-bg.gif) right top no-repeat;
     padding: 0 17px 0 17px;
 }
 .title strong strong
 {
     padding: 10px 0 0 4px;
     height: 26px;
-    background: #E4484B;
+    background: #FF0054;
 }
 
 .title1
 {
     color: #000;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 10px 0 0 10px;
     display: block;
     width: 38px;
@@ -271,8 +276,8 @@ h2
 {
     padding-top: 8px;
     color: #8d8d8d;
-    font-size: 0.866em;
-    line-height: 1.24em;
+    font-size: 1em;
+    line-height: 1.6em;
 }
 
 .pad
@@ -349,7 +354,7 @@ h2
 }
 #thumbNav a
 {
-    color: #E4484B;
+    color: #FF0054;
     display: inline-block;
     height: 19px;
     width: 19px;
@@ -440,7 +445,7 @@ h2
 .login-warning
 {
     font-size: 12px;
-    color: #E4484B;
+    color: #FF0054;
 }
 
 .login input[type=password]
@@ -459,10 +464,27 @@ h2
 
 .login-buton
 {
-    background-color: #E4484B;
+    background-color: #FF0054;
     border: 0;
     color: White;
     margin-top: 10px;
     height: 30px;
     width: 150px;
+}
+
+.wish
+{
+    width: 270px;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.add-wish
+{
+    width: 270px;
+    height: 120px;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-top: 2px;
 }
