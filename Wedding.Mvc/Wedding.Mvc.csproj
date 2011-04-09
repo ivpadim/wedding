@@ -109,6 +109,9 @@
     <Content Include="Content\Images\wish-tile.jpg" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\Images\up-btn.gif" />
+    <Content Include="Content\Scripts\jquery.tmpl.min.js" />
+    <Content Include="Content\Scripts\knockout-1.1.2.js" />
+    <Content Include="Content\Scripts\knockout.mapping-latest.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Scripts\cufon-replace.js" />
     <Content Include="Content\Scripts\cufon-yui.js" />

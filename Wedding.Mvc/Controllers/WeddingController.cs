@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Services.Client;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.WindowsAzure;
@@ -32,9 +33,36 @@ namespace Wedding.Mvc.Controllers
             var query = context.CreateQuery<Wish>("Wishes")
                                 .Where(w => w.PartitionKey == "wedding");
 
+
             return View(query);
         }
 
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult GetYourWishes(string token)
+        {
+            ViewBag.Message = "Your Wishes";
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var query = context.CreateQuery<Wish>("Wishes")
+                                .Where(w => w.PartitionKey == "wedding")
+                                .Take(6).AsTableServiceQuery();
+
+            var continuation = token != null
+                   ? (ResultContinuation)new XmlSerializer(typeof(ResultContinuation)).Deserialize(new StringReader(token))
+                   : null;
+            var response = query.EndExecuteSegmented(query.BeginExecuteSegmented(continuation, null, null));
+            var writer = new StringWriter();
+            new XmlSerializer(typeof(ResultContinuation)).Serialize(writer, response.ContinuationToken);
+            return Json(new
+            {
+                wishes = response.Results,
+                nextToken = writer.ToString(),
+                hasMore = response.ContinuationToken != null
+            });
+        }
 
         [HttpPost]
         public ActionResult AddWish(string comment)
@@ -55,7 +83,7 @@ namespace Wedding.Mvc.Controllers
             context.AddObject("Wishes", wish);
             context.SaveChangesWithRetries();
 
-            return RedirectToAction("YourWishes");
+            return Json(new { ExitCode = "400" });
         }
 
 

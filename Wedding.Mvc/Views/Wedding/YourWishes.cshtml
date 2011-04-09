@@ -1,37 +1,31 @@
 ﻿@model IEnumerable<Wedding.Mvc.Models.Wish>
 @{
     ViewBag.Title = "Your Wishes";
-    Layout = "~/Views/Shared/_Layout.cshtml"; ;
 }
-<script type="text/javascript">
-    function OnFailure() {
-        alert("Failure");
-    }
-
-    function OnSuccess() {
-        alert("Success");
-    }
-
-    function OnComplete() {
-        alert("Complete");
-    }
-</script>
 <div id="page-wishes">
     <div class="col-1">
         <h2 class="h2-margin">
             Your wishes</h2>
-        @foreach (var item in Model)
-        {
-            <div class="wish">
+        <div id="wishes" style="clear: right" data-bind="template: {
+            name: 'wishTemplate',
+            foreach: wishes,
+            beforeRemove: function(elem) { $(elem).slideUp(); },
+            afterAdd: function(elem) { $(elem).hide().slideDown(); }
+        }">
+        </div>
+        <a id="nextButton" href="" class="link" style="float: right;
+            margin-right: 100px;">Read more</a>
+        <script type="text/html" id="wishTemplate">
+         <div class="wish">
                 <div class="container">
-                    <strong class="title"><strong><strong>@item.From</strong></strong></strong> <strong
+                    <strong class="title"><strong><strong>${From}</strong></strong></strong> <strong
                         class="title1">Said:</strong>
                 </div>
                 <div class="font">
-                    @item.Message
+                    ${Message}
                 </div>
             </div>
-        }
+        </script>
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
@@ -44,21 +38,66 @@
             </p>
             <br />
             <br />
-            @using (Ajax.BeginForm("AddWish", new AjaxOptions
-            {
-                UpdateTargetId = "comment",
-                OnSuccess = "OnSucess",
-                OnFailure = "OnFailure",
-                OnComplete = "OnComplete"
-            }))
+            @using (Ajax.BeginForm("AddWish", null, new AjaxOptions { OnSuccess = "OnSuccess" }, new { @id = "form-wish" }))
             {   
                 @Html.TextArea("comment", new { @class = "add-wish", rows = "6", cols = "1", onkeypress = "if(this.value.length>250)return false;", onblur = "if(this.value.length>250)this.value=this.value.substr(0,250);" })
                 <div class="alignright">
                     <a href="#" class="link" onclick="$('#comment').text('');return false;">Reset</a>
-                    <a href="#" class="link" onclick="$('#submit').click();return false;">Enviar</a>
+                    <a href="#" class="link" onclick="$('#form-wish').submit();return false;">Enviar</a>
                 </div>
-                <button id="submit" type="submit" style="visibility: hidden" />
             }
         </div>
     </div>
 </div>
+<script type="text/javascript">
+     var mapping = {
+        wishes: {
+            key: function (data) {
+                return ko.utils.unwrapObservable(data.RowKey);
+            },
+            create: function (options) {
+                var o = {
+                    deleteWish: function () {
+                        $.post('/Wedding/DeleteWish', {
+                            rowKey: ko.utils.unwrapObservable(this.RowKey),
+                        });
+                        return false;
+                    }
+                };
+                ko.mapping.fromJS(options.data, {}, o);
+                return o;
+            }
+        }
+    };
+
+    var viewModel = ko.mapping.fromJS({
+        nextToken: null,
+        hasMore: true,
+        tokens: [],
+        wishes: []
+    }, mapping);
+
+    ko.applyBindings(viewModel);
+
+    function GetWishes()
+    {
+        $.post('/Wedding/GetYourWishes', { token: viewModel.tokens()[0] },
+            function (data) {
+                ko.mapping.updateFromJS(viewModel, data);               
+            });
+    }
+
+    function OnSuccess(e) {
+        var result = $.parseJSON(e);
+        $('#comment').text('');
+    }
+    $(function () {
+    GetWishes();
+    $('#nextButton').click(function () {        
+        viewModel.tokens.unshift(ko.utils.unwrapObservable(viewModel.nextToken));
+        GetWishes();
+        return false;
+    });    
+ 
+});   
+</script>
