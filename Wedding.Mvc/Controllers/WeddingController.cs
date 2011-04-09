@@ -27,28 +27,24 @@ namespace Wedding.Mvc.Controllers
         public ActionResult YourWishes()
         {
             ViewBag.Message = "Your Wishes";
-            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
-            var context = account.CreateCloudTableClient().GetDataServiceContext();
-
-            var query = context.CreateQuery<Wish>("Wishes")
-                                .Where(w => w.PartitionKey == "wedding");
-
-
-            return View(query);
+            return View();
         }
 
 
         [HttpPost]
         [ValidateInput(false)]
+        [Authorize]
         public ActionResult GetYourWishes(string token)
         {
             ViewBag.Message = "Your Wishes";
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
 
+            var count = Request.UrlReferrer.OriginalString.ToLower().Contains("wedding") ? 8 : 4;
+
             var query = context.CreateQuery<Wish>("Wishes")
                                 .Where(w => w.PartitionKey == "wedding")
-                                .Take(6).AsTableServiceQuery();
+                                .Take(count).AsTableServiceQuery();
 
             var continuation = token != null
                    ? (ResultContinuation)new XmlSerializer(typeof(ResultContinuation)).Deserialize(new StringReader(token))

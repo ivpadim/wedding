@@ -26,7 +26,7 @@
     <Property name="EntryPoint" value="Wedding.Mvc.dll" />
     <Property name="SourceDir" value="C:\Proyectos\Wedding\Wedding.Mvc\" />
     <Property name="RoleTargetFramework" value="v4.0" />
-    <Property name="SitePhysicalPath" value="C:\Proyectos\Wedding\Wedding.Mvc\" />
+    <Property name="SitePhysicalPath" value="C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\" />
     <Property name="OriginalItemSpec" value="C:\Proyectos\Wedding\Wedding.CloudService\Wedding.CloudService.ccproj" />
     <Property name="MSBuildSourceProjectFile" value="C:\Proyectos\Wedding\Wedding.CloudService\Wedding.CloudService.ccproj" />
     <Property name="MSBuildSourceTargetName" value="ResolveSingleWebRoleReference" />
@@ -34,7 +34,7 @@
     <Property name="TargetRuntimeVersion" value="v4.0" />
   </Properties>
   <Sites>
-    <Site name="Web" physicalDirectory="C:\Proyectos\Wedding\Wedding.Mvc\">
+    <Site name="Web" physicalDirectory="C:\Proyectos\Wedding\Wedding.CloudService\obj\Debug\Wedding.Mvc\">
       <Bindings>
         <Binding name="Endpoint1" endpointName="Endpoint1" />
       </Bindings>

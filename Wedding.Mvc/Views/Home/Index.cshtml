@@ -1,41 +1,44 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-<script type="text/javascript">
-    function formatText(index, panel) {
-        return index + "";
-    }
-
-    $(function () {
-        $('.slider').anythingSlider({
-            easing: "easeInOutExpo",        // Anything other than "linear" or "swing" requires the easing plugin
-            autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
-            delay: 2000,                    // How long between slide transitions in AutoPlay mode
-            startStopped: false,            // If autoPlay is on, this can force it to start stopped
-            animationTime: 800,             // How long the slide transition takes
-            hashTags: true,                 // Should links change the hashtag in the URL?
-            buildNavigation: true,          // If true, builds and list of anchor links to link to each slide
-            pauseOnHover: true,             // If true, and autoPlay is enabled, the show will pause on hover
-            startText: "Play",             // Start text
-            stopText: "Stop",               // Stop text
-            navigationFormatter: formatText       // Details at the top of the file on this use (advanced use)
-        });
-
-    });
-</script>
-<div class="slider">
-    <div class="wrapper" style="overflow-x: hidden; overflow-y: hidden;">
-        <ul>
-            <li class="cloned">
-                <img src="@Url.Content("~/Content/Images/slide5.jpg")" alt=""/></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide1.jpg")" alt="" /></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide2.jpg")" alt="" /></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide3.jpg")" alt="" /></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide4.jpg")" alt="" /></li>           
-        </ul>
+@Html.Partial("_PhotoSlider")
+<div id="home-page">
+    <div class="col-1">
+        <h2 class="h2-margin">
+            Hola mundo!</h2>
+        <div class="col-indent">
+            Como saben para nosotros esta por comenzar una nueva etapa en nuestras vidas y queremos
+            que sean parte de ella en la celebración del proximo 3 de Diciembre de 2011 en el
+            magico lugar de Riviera Maya,
+        </div>
+        <br />
+        <div class="col-indent">
+            A continuacion encontraran datos memorables para nosotros, informacion de la ceramonia,
+            hospedaje y sugerencias.
+        </div>
+        <br />
+        <div class="col-indent">
+            Esperamos que este sitio sea de gran ayuda para programar su viaje con tiempo porque
+            aunque no lo crean, YA SOLO</div>
+        @{
+            var weddingDate = new DateTime(2011, 12, 3);
+            var countDown = weddingDate.Subtract(DateTime.Now).Days;
+        }
+        <div class="countdown">
+            <strong class="title1">faltan</strong> <strong class="title3">@countDown</strong>
+            <strong class="title1">dias</strong>
+        </div>
+        <div class="col-indent">
+            y queremos para que nos acompañen en el dia mas importante en nuestras vidas. GRACIAS!!
+        </div>
+        <br />
+        <br />
+        @Html.ActionLink("nuestra historia", "About", "Home", null, new { @class = "link" })<br />
+    </div>
+    <div class="col-2">
+        <h2 class="h2-margin">
+            Your wishes</h2>
+        @Html.Partial("_YourWishes")
+        @Html.ActionLink("agrega el tuyo", "YourWishes", "Wedding", null, new { @class = "link", style = "margin-top:15px;" })
     </div>
 </div>

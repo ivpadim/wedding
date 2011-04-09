@@ -1,0 +1,62 @@
+﻿<div class="wishes" data-bind="template: {
+            name: 'wishTemplate',
+            foreach: wishes,
+            beforeRemove: function(elem) { 
+                $(elem).fadeOut('slow');
+            },
+            afterAdd: function(elem) {
+                $(elem).fadeIn('slow');
+                 cufonize();
+            }
+        }">
+</div>
+<script type="text/html" id="wishTemplate">
+         <div class="wish">
+                <div class="container">
+                    <strong class="title"><strong><strong>${From}</strong></strong></strong> <strong
+                        class="title1">escribio:</strong>
+                </div>
+                <div class="font">
+                    ${Message}
+                </div>
+            </div>
+</script>
+<script type="text/javascript">
+     var mapping = {
+        wishes: {
+            key: function (data) {
+                return ko.utils.unwrapObservable(data.RowKey);
+            },
+            create: function (options) {
+                var o = {
+                    deleteWish: function () {
+                        $.post('/Wedding/DeleteWish', {
+                            rowKey: ko.utils.unwrapObservable(this.RowKey),
+                        });
+                        return false;
+                    }
+                };
+                ko.mapping.fromJS(options.data, {}, o);
+                return o;
+            }
+        }
+    };
+    var viewModel = ko.mapping.fromJS({
+        nextToken: null,
+        hasMore: true,
+        tokens: [],
+        wishes: []
+    }, mapping);
+
+    ko.applyBindings(viewModel);
+
+    function GetWishes()
+    {
+        $.post('/Wedding/GetYourWishes', { token: viewModel.tokens()[0] },
+            function (data) {
+                ko.mapping.updateFromJS(viewModel, data);               
+            });
+    }
+
+    GetWishes();
+</script>

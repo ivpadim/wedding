@@ -1,31 +1,43 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<div id="page-contact">
+<div id="contact-page">
     <div class="col-1">
         <h2 class="h2-margin">
-            Contact</h2>
+            Contact form</h2>
         <div class="col-indent">
-            <span>Quisque diam lorem interdum vitae daibs acen erat lacinia fermentumonec in vet
-                vel ipsumctor pulvinar. Proorper urna et feisu lum iaculis lacinia est. Proin dictuntm
-                vee euismod consequat ante. Lorem lor siton sectetuer adipistesque sliqua ong ferman
-                nulla el diad in lacus ut enim adipiscing aliqueulla venenatis. In pede mi, aliquet
-                sit amemod intor uula. Aliquam dapibus tinci metus aesent justo dolor lobor tis
-                quis lobo vinar ac lorstibulm sed anonec sagittis euisod purt perspi unde omns iste
-                natuoluptatem </span>
+            <form id="ContactForm" action="">
+            <div>
+                <label>
+                    <input type="text" value="Name:" class="input" onblur="if(this.value=='') this.value='Name:'"
+                        onfocus="if(this.value =='Name:' ) this.value=''" /></label>
+                <label>
+                    <input type="text" value="E-mail:" class="input" onblur="if(this.value=='') this.value='E-mail:'"
+                        onfocus="if(this.value =='E-mail:' ) this.value=''" /></label>
+                <textarea cols="1" rows="1" onblur="if(this.value=='') this.value='Message:'" onfocus="if(this.value =='Message:' ) this.value=''">Message:</textarea>
+            </div>
+            <div class="alignright">
+                <a href="#" class="link" onclick="document.getElementById('ContactForm').reset()">Reset</a><a
+                    href="#" class="link" onclick="document.getElementById('ContactForm').submit()">Submit</a>
+            </div>
+            </form>
         </div>
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
-            Contact</h2>
+            Contact information</h2>
         <div class="col-indent">
-            <span>Quisque diam lorem interdum vitae daibs acen erat lacinia fermentumonec in vet
-                vel ipsumctor pulvinar. Proorper urna et feisu lum iaculis lacinia est. Proin dictuntm
-                vee euismod consequat ante. Lorem lor siton sectetuer adipistesque sliqua ong ferman
-                nulla el diad in lacus ut enim adipiscing aliqueulla venenatis. In pede mi, aliquet
-                sit amemod intor uula. Aliquam dapibus tinci metus aesent justo dolor lobor tis
-                quis lobo vinar ac lorstibulm sed anonec sagittis euisod purt perspi unde omns iste
-                natuoluptatem </span>
+            <span>Para cualquier duda estamos a tus ordenes, no dudes en contactarnos recuerda no
+                dejes para manana lo que puedes hacer hoy a traves de un correo o una llamada.
+                <br />
+                <br />
+                Te listamos a continuacion nuestros telefonos y correos personales, por favor dale
+                un uso adecuado y no lo compartas con la chusma!! ah tambien puedes usar la forma
+                de contacto que esta a tu izquierda.
+                <br />
+                <br />
+                <img src="@Url.Content("~/Content/Images/contact-tile.jpg")" width="290px"/>
+            </span>
         </div>
     </div>
 </div>
