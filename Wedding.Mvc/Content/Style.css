@@ -483,6 +483,44 @@ h2
     width: 150px;
 }
 
+/*-----------------------------------------*/
+
+.user
+{
+    font-size: 1.5em;
+    line-height: 1em;
+    vertical-align: middle;
+    padding: 10px;
+    width: 300px;
+}
+
+.user input[type=text]
+{
+    font-size: 14px;
+    margin-bottom: 10px;
+    height: 25px;
+    padding: 1px;
+    padding-left: 5px;
+    color: #6F6F6F;
+    width: 220px;
+}
+
+.user-warning
+{
+    font-size: 12px;
+    color: #FF0054;
+}
+
+.user-buton
+{
+    background-color: #FF0054;
+    border: 0;
+    color: White;
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+}
+
 .wishes
 {
     float: left;
@@ -491,7 +529,7 @@ h2
 .wish
 {
     width: 275px;
-    height: 120px;
+    height: 130px;
     float: left;
     margin-left: 5px;
     margin-right: 5px;

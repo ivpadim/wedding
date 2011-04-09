@@ -2,6 +2,7 @@
 using System.Web.Routing;
 using Wedding.Mvc.Models;
 using Wedding.Mvc.Services;
+using System.Web.Security;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -9,7 +10,6 @@ namespace Wedding.Mvc.Controllers
     {
         public IFormsAuthenticationService FormsService { get; set; }
         public AccountMembershipService MembershipService { get; set; }
-
 
         protected override void Initialize(RequestContext requestContext)
         {
@@ -52,6 +52,30 @@ namespace Wedding.Mvc.Controllers
             return RedirectToAction("Login", "Account");
         }
 
+        [Authorize(Roles = "Administrator")]
+        public ActionResult CreateUser()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Administrator")]
+        public ActionResult CreateUser(UserData userData)
+        {
+            if (ModelState.IsValid)
+            {
+                var createStatus = this.MembershipService.CreateUser(userData);
+                if (createStatus == MembershipCreateStatus.Success)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("", AccountValidation.ErrorCodeToString(createStatus));
+                }
+            }
+            return View(userData);
+        }
 
     }
 }

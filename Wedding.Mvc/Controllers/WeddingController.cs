@@ -70,6 +70,18 @@ namespace Wedding.Mvc.Controllers
             var userIdentity = userPrincipal.Identity as UserIdentity;
             var userData = UserData.FromString(userIdentity.Ticket.UserData);
 
+            comment = comment.Trim();
+            if (!comment.EndsWith("."))
+                comment = comment + ".";
+
+            var previousWish = context.CreateQuery<Wish>("Wishes")
+                                                .Where(w => w.PartitionKey == "wedding" &&
+                                                                    w.Account == userData.Email)
+                                                .FirstOrDefault();
+
+            if (previousWish != null)
+                context.DeleteObject(previousWish);
+
             var wish = new Wish();
             wish.Account = userData.Email;
             wish.From = userData.FirstName + " " + userData.LastName;
@@ -79,7 +91,7 @@ namespace Wedding.Mvc.Controllers
             context.AddObject("Wishes", wish);
             context.SaveChangesWithRetries();
 
-            return Json(new { ExitCode = "400" });
+            return new EmptyResult();
         }
 
 

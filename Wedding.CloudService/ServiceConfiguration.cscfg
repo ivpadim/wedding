@@ -4,7 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ivpadim;AccountKey=OogluWereNcJuzM5RpavxceQJ3Zlic4R3YclPxr7DwQ/KMUuNbJBMQ7bRjdEAl9x6+lYY8RIu9Gb3LWX175XEQ==" />
+      <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="AdminEmail" value="ivpadim@gmail.com" />
       <Setting name="AdminFirstName" value="Ivan" />
       <Setting name="AdminLastName" value="Padron" />

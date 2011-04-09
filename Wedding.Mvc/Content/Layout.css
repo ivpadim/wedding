@@ -54,12 +54,12 @@
 
 #about-page .col-1
 {
-    width: 580px;
-    margin-right:10px;
+    width: 560px;
 }
+
 #about-page .col-2
 {
-    width: 296px;
+    width: 315px;
     margin-left: 10px;
 }
 
@@ -70,13 +70,13 @@
 }
 #contact-page .col-2
 {
-    width: 590px;
+    width: 560px;
     margin-left: 10px;
 }
 
 #wishes-page .col-1
 {
-    width: 580px;
+    width: 570px;
 }
 #wishes-page .col-2
 {
@@ -85,6 +85,12 @@
 }
 
 #login-page
+{
+    margin-top: -100px;
+    margin-left: 450px;
+}
+
+#user-page
 {
     margin-top: -100px;
     margin-left: 450px;

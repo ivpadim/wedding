@@ -10,7 +10,7 @@ namespace Wedding.Mvc.Models
     public class LoginModel
     {
         [Required]
-        [Display(Name = "user name")]
+        [Display(Name = "email")]
         public string Account { get; set; }
 
         [Required]
@@ -24,11 +24,26 @@ namespace Wedding.Mvc.Models
 
     public class UserData : TableServiceEntity
     {
+        [Required(ErrorMessage = "email required")]
+        [Display(Name = "email")]
+        [RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "Not a valid email")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "password required")]
+        [Display(Name = "password")]
         public string Password { get; set; }
+
+        [Required(ErrorMessage = "first name required")]
+        [Display(Name = "first name")]
         public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "last name required")]
+        [Display(Name = "last name")]
         public string LastName { get; set; }
+
+        [Display(Name = "role")]
         public string Role { get; set; }
+
         public DateTime LastLogin { get; set; }
 
         public UserData()

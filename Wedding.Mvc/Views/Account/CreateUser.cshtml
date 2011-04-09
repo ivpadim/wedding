@@ -1,0 +1,97 @@
+﻿@model Wedding.Mvc.Models.UserData
+@{
+    ViewBag.Title = "Create User";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+<div id="user-page">
+    @using (Html.BeginForm())
+    {
+        <div class="user">
+            <h2 class="h2-margin">
+                Create User</h2>
+            @Html.ValidationSummary(true)
+            <table>
+                <tr>
+                    <td>
+                        <div class="user-label">
+                            @Html.LabelFor(model => model.Email)
+                        </div>
+                        <div class="user-warning">
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.EditorFor(model => model.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="user-label">
+                            @Html.LabelFor(model => model.Password)
+                        </div>
+                        <div class="user-warning">
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.EditorFor(model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="user-label">
+                            @Html.LabelFor(model => model.FirstName)
+                        </div>
+                        <div class="user-warning">
+                            @Html.ValidationMessageFor(model => model.FirstName)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.EditorFor(model => model.FirstName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="user-label">
+                            @Html.LabelFor(model => model.LastName)
+                        </div>
+                        <div class="user-warning">
+                            @Html.ValidationMessageFor(model => model.LastName)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.EditorFor(model => model.LastName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="user-label">
+                            @Html.LabelFor(model => model.Role)
+                        </div>
+                        <div class="user-warning">
+                            @Html.ValidationMessageFor(model => model.Role)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.EditorFor(model => model.Role)
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <input type="submit" class="user-buton" value="Create" />
+                    </td>
+                </tr>
+            </table>
+        </div>   
+    }
+</div>
