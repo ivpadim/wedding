@@ -49,7 +49,7 @@ namespace Wedding.Mvc.Models
         public UserData()
             : base("wedding", (DateTime.MaxValue - DateTime.UtcNow).Ticks.ToString("d19") + Guid.NewGuid().ToString())
         {
-
+            this.LastLogin = new DateTime(1900, 1, 1);
         }
 
         public static UserData FromString(string stringData)

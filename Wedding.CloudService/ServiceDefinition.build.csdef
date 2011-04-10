@@ -29,6 +29,9 @@
       <Setting name="AdminFirstName" />
       <Setting name="AdminLastName" />
       <Setting name="AdminPassword" />
+      <Setting name="GmailAccount" />
+      <Setting name="GmailPassword" />
+      <Setting name="GmailName" />
     </ConfigurationSettings>
   </WebRole>
 </ServiceDefinition>

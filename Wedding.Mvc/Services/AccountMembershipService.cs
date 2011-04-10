@@ -59,8 +59,6 @@ namespace Wedding.Mvc.Services
             if (String.IsNullOrEmpty(userInfo.Role))
                 userInfo.Role = "Guest";
 
-
-
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
 

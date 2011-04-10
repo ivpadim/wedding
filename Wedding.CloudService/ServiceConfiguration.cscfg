@@ -5,10 +5,13 @@
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="AdminEmail" value="ivpadim@gmail.com" />
-      <Setting name="AdminFirstName" value="Ivan" />
-      <Setting name="AdminLastName" value="Padron" />
-      <Setting name="AdminPassword" value="android" />
+      <Setting name="AdminEmail" value="YourEmail" />
+      <Setting name="AdminFirstName" value="YourName" />
+      <Setting name="AdminLastName" value="YourLastName" />
+      <Setting name="AdminPassword" value="YourPassword" />
+      <Setting name="GmailAccount" value="YourGmailAccount" />
+      <Setting name="GmailPassword" value="YourGmailPassword" />
+      <Setting name="GmailName" value="YourGmailName" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

@@ -10,6 +10,9 @@
       <Setting name="AdminLastName" />
       <Setting name="AdminPassword" />
       <Setting name="DataConnectionString" />
+      <Setting name="GmailAccount" />
+      <Setting name="GmailName" />
+      <Setting name="GmailPassword" />
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
     </ConfigurationSettings>
     <Endpoints>

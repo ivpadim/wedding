@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="3003ab24-4c5c-455f-b371-3b46c8d0c36a" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Wedding.CloudService" generation="1" functional="0" release="0" Id="3653c65d-567b-4324-8865-1890f257c926" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="Wedding.CloudServiceGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -48,6 +48,21 @@
         <aCS name="Wedding.Mvc:DataConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:DataConnectionString" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:GmailAccount" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:GmailAccount" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:GmailName" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:GmailName" />
+          </maps>
+        </aCS>
+        <aCS name="Wedding.Mvc:GmailPassword" defaultValue="">
+          <maps>
+            <mapMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/MapWedding.Mvc:GmailPassword" />
           </maps>
         </aCS>
         <aCS name="Wedding.Mvc:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="">
@@ -109,6 +124,21 @@
             <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/DataConnectionString" />
           </setting>
         </map>
+        <map name="MapWedding.Mvc:GmailAccount" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/GmailAccount" />
+          </setting>
+        </map>
+        <map name="MapWedding.Mvc:GmailName" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/GmailName" />
+          </setting>
+        </map>
+        <map name="MapWedding.Mvc:GmailPassword" kind="Identity">
+          <setting>
+            <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/GmailPassword" />
+          </setting>
+        </map>
         <map name="MapWedding.Mvc:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc/Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
@@ -135,6 +165,9 @@
               <aCS name="AdminLastName" defaultValue="" />
               <aCS name="AdminPassword" defaultValue="" />
               <aCS name="DataConnectionString" defaultValue="" />
+              <aCS name="GmailAccount" defaultValue="" />
+              <aCS name="GmailName" defaultValue="" />
+              <aCS name="GmailPassword" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
               <aCS name="__ModelData" defaultValue="&lt;m role=&quot;Wedding.Mvc&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;Wedding.Mvc&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
             </settings>
@@ -154,9 +187,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="0c98c7a3-d6fb-47f9-8559-6328769f5e85" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
+    <implementation Id="4dbc3f34-f086-48b0-95d4-e929e8f0d61d" ref="Microsoft.RedDog.Contract\ServiceContract\Wedding.CloudServiceContract@ServiceDefinition.build">
       <interfacereferences>
-        <interfaceReference Id="08bf9cd5-ba54-401c-8876-1250977fe63c" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
+        <interfaceReference Id="422d730b-1046-4e43-854d-98e4074ef941" ref="Microsoft.RedDog.Contract\Interface\Wedding.Mvc:Endpoint1@ServiceDefinition.build">
           <inPort>
             <inPortMoniker name="/Wedding.CloudService/Wedding.CloudServiceGroup/Wedding.Mvc:Endpoint1" />
           </inPort>

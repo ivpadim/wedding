@@ -61,6 +61,7 @@ namespace Wedding.Mvc.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult AddWish(string comment)
         {
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));

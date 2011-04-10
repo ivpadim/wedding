@@ -13,11 +13,14 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=marthaeivan;AccountKey=D5NRX/wrLy0CdZV/aJGj+cp9ESL/OR09U6go7yF3OgJM9iAPM2NoH8aiVaSaeXb9BQGUFWWnDV0/G4e5o2logw==" />
       <Setting name="AdminEmail" value="ivpadim@gmail.com" />
       <Setting name="AdminFirstName" value="Ivan" />
       <Setting name="AdminLastName" value="Padron" />
       <Setting name="AdminPassword" value="android" />
+      <Setting name="GmailAccount" value="marthaeivan@gmail.com" />
+      <Setting name="GmailPassword" value="martha22" />
+      <Setting name="GmailName" value="Martha &amp; Ivan Wedding" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

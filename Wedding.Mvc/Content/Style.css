@@ -589,3 +589,11 @@ h2
     padding: 3px 0 3px 5px;
     color: #6F6F6F;
 }
+
+.font-margin
+{
+    margin-top:20px;
+    margin-bottom:10px;
+    border-bottom: 1px solid #E0E0E0;
+    border-spacing: 2px;
+}

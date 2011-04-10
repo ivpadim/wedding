@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <DeploymentBuildOnly>False</DeploymentBuildOnly>
+    <DeploymentBuildOnly>True</DeploymentBuildOnly>
     <DeploymentIsExpanded>False</DeploymentIsExpanded>
-    <DeploymentAccountName>WindowsAzureAccount1</DeploymentAccountName>
+    <DeploymentAccountName>martha&amp;ivan</DeploymentAccountName>
     <DeploymentHostedService>marthaeivan</DeploymentHostedService>
-    <DeploymentHostedServiceLabel>wedding site</DeploymentHostedServiceLabel>
+    <DeploymentHostedServiceLabel>Martha e Ivan Wedding Site</DeploymentHostedServiceLabel>
     <DeploymentSlot>Production</DeploymentSlot>
     <DeploymentIncludeIntellitrace>False</DeploymentIncludeIntellitrace>
     <DeploymentEnableWebDeploy>False</DeploymentEnableWebDeploy>
-    <DeploymentStorageService>ivpadim</DeploymentStorageService>
-    <DeploymentStorageServiceLabel>ivpadim</DeploymentStorageServiceLabel>
-    <DeploymentLabel>Wedding.CloudService - 4/9/2011 3:15:31 AM</DeploymentLabel>
+    <DeploymentStorageService>marthaeivan</DeploymentStorageService>
+    <DeploymentStorageServiceLabel>marthaeivan</DeploymentStorageServiceLabel>
+    <DeploymentLabel>Wedding.CloudService - 4/10/2011 4:24:49 AM</DeploymentLabel>
     <DeploymentPromptBeforeDeleting>False</DeploymentPromptBeforeDeleting>
   </PropertyGroup>
 </Project>

@@ -90,9 +90,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AccountMembershipService.cs" />
     <Compile Include="Services\FormsAuthenticationService.cs" />
+    <Compile Include="Services\GmailService.cs" />
     <Compile Include="WeddingWebRole.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\about-us-1.jpg" />
+    <Content Include="Content\Images\about-us-2.jpg" />
+    <Content Include="Content\Images\about-us-3.jpg" />
     <Content Include="Content\Images\wedding-barcelo.jpg" />
     <Content Include="Content\Images\buton.gif" />
     <Content Include="Content\Images\contact-tile.jpg" />
