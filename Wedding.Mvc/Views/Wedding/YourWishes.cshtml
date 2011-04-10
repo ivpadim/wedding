@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Your Wishes";
+    ViewBag.Title = "Your wishes";
 }
 <div id="wishes-page">
     <div class="col-1">
@@ -13,16 +13,16 @@
         <h2 class="h2-margin">
             Agrega el tuyo</h2>
         <div class="col-indent">
-            <img src="@Url.Content("~/Content/Images/wish-tile.jpg")"  alt="" />
-            <p class="font">
+            <img src="@Url.Content("~/Content/Images/wish-tile.jpg")" alt="" />
+            <p class="font2">
                 En este apartado puedes compartirnos cualquier deseo que tengas para esta nueva
                 etapa de nuestras vidas. GRACIAS POR TU AMISTAD.
-            </p>
-            <p class="font">
+                <br />
+                <br />
                 Si ya escribiste algun deseo y quieres modificarlo vuelve a agregarlo aqui.
             </p>
             <br />
-            <strong>Agrega tu deseo:</strong> (200 chars maximo)
+            <strong class="instruction">Agrega tu deseo:</strong> (200 chars maximo)
             <br />
             <br />
             @using (Ajax.BeginForm("AddWish", null, new AjaxOptions { OnSuccess = "OnWishAdded" }, new { @id = "form-wish" }))

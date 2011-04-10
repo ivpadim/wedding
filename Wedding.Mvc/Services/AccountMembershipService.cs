@@ -12,6 +12,7 @@ namespace Wedding.Mvc.Services
     {
         bool AuthenticateUser(string userName, string password);
         MembershipCreateStatus CreateUser(UserData userData);
+        MembershipCreateStatus EditUser(UserData userData);
     }
 
     public class AccountMembershipService : IMembershipService
@@ -72,10 +73,39 @@ namespace Wedding.Mvc.Services
                 return MembershipCreateStatus.DuplicateUserName;
 
             context.AddObject("Users", userInfo);
-            context.SaveChanges();
+            context.SaveChangesWithRetries();
 
             return MembershipCreateStatus.Success;
         }
+
+        public MembershipCreateStatus EditUser(UserData userInfo)
+        {
+            if (String.IsNullOrEmpty(userInfo.Password)) throw new ArgumentException("Value cannot be null or empty.", "Password");
+            if (String.IsNullOrEmpty(userInfo.FirstName)) throw new ArgumentException("Value cannot be null or empty.", "First Name");
+            if (String.IsNullOrEmpty(userInfo.LastName)) throw new ArgumentException("Value cannot be null or empty.", "First Name");
+
+
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var currentUser = context.CreateQuery<UserData>("Users")
+                        .Where(user => user.PartitionKey == "wedding" &&
+                                                     user.Email == userInfo.Email)
+                        .FirstOrDefault();
+
+            if (currentUser == null)
+                return MembershipCreateStatus.InvalidUserName;
+
+            currentUser.FirstName = userInfo.FirstName;
+            currentUser.LastName = userInfo.LastName;
+            currentUser.Password = userInfo.Password;
+
+            context.UpdateObject(currentUser);
+            context.SaveChangesWithRetries();
+
+            return MembershipCreateStatus.Success;
+        }
+
     }
 
     public static class AccountValidation

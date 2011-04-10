@@ -77,5 +77,33 @@ namespace Wedding.Mvc.Controllers
             return View(userData);
         }
 
+        [Authorize]
+        public ActionResult EditUser()
+        {
+            var userPrincipal = HttpContext.User as UserPrincipal;
+            var userIdentity = userPrincipal.Identity as UserIdentity;
+            var userData = UserData.FromString(userIdentity.Ticket.UserData);
+            return View(userData);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult EditUser(UserData userData)
+        {
+            if (ModelState.IsValid)
+            {
+                var createStatus = this.MembershipService.EditUser(userData);
+                if (createStatus == MembershipCreateStatus.Success)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", AccountValidation.ErrorCodeToString(createStatus));
+                }
+            }
+            return View(userData);
+        }
+
     }
 }

@@ -35,14 +35,13 @@
                 <div class="menu">
                     <ul class="left">
                         <li class="@Html.Partial("_OnActiveLink", "Home")">@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Our family")">@Html.ActionLink("Our family", "Family", "Home")</li>
                         <li class="@Html.Partial("_OnActiveLink", "About us")">@Html.ActionLink("About us", "About", "Home")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Contact")">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Wedding")">@Html.ActionLink("Wedding", "Index", "Wedding")</li>
                     </ul>
                     <ul class="right">
-                        <li class="@Html.Partial("_OnActiveLink", "Wedding")">@Html.ActionLink("Wedding", "Index", "Wedding")</li>
                         <li class="@Html.Partial("_OnActiveLink", "Your wishes")">@Html.ActionLink("Your wishes", "YourWishes", "Wedding")</li>
                         <li class="@Html.Partial("_OnActiveLink", "Photo album")">@Html.ActionLink("Photo album", "PhotoAlbum", "Wedding")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Contact")">@Html.ActionLink("Contact", "Contact", "Home")</li>
                         <li class="@Html.Partial("_OnActiveLink", "Links")">@Html.ActionLink("Links", "About", "Home")</li>
                     </ul>
                 </div>
@@ -50,6 +49,7 @@
         </tr>
         <tr>
             <td colspan="2" class="content">
+                @Html.Partial("_PhotoSlider")
                 @RenderBody()
             </td>
         </tr>

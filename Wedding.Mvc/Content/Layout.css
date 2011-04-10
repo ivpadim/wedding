@@ -78,10 +78,11 @@
 {
     width: 570px;
 }
+
 #wishes-page .col-2
 {
-    width: 280px;
-    margin-left: 10px;
+    width: 290px;
+    margin-left: 5px;
 }
 
 #login-page
