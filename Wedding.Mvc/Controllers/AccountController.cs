@@ -1,8 +1,12 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using Microsoft.WindowsAzure.StorageClient;
 using Wedding.Mvc.Models;
 using Wedding.Mvc.Services;
-using System.Web.Security;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -84,6 +88,28 @@ namespace Wedding.Mvc.Controllers
             var userIdentity = userPrincipal.Identity as UserIdentity;
             var userData = UserData.FromString(userIdentity.Ticket.UserData);
             return View(userData);
+        }
+
+        [Authorize(Roles = "Administrator")]
+        public ActionResult UpdateUser(string email)
+        {
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var userData = context.CreateQuery<UserData>("Users")
+                        .Where(user => user.PartitionKey == "wedding" &&
+                                                     user.Email == email)
+                        .FirstOrDefault();
+
+            return View("EditUser", userData);
+        }
+
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult UpdateUser(UserData userData)
+        {
+            return EditUser(userData);
         }
 
         [HttpPost]

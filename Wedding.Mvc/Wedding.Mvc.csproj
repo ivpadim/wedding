@@ -93,6 +93,7 @@
     <Compile Include="WeddingWebRole.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\wedding-barcelo.jpg" />
     <Content Include="Content\Images\buton.gif" />
     <Content Include="Content\Images\contact-tile.jpg" />
     <Content Include="Content\Images\link-bg.gif" />
@@ -103,10 +104,11 @@
     <Content Include="Content\Images\slide2.jpg" />
     <Content Include="Content\Images\slide3.jpg" />
     <Content Include="Content\Images\slide4.jpg" />
-    <Content Include="Content\Images\slide5.jpg" />
     <Content Include="Content\Images\stop-buton.gif" />
     <Content Include="Content\Images\title-left-bg.gif" />
     <Content Include="Content\Images\title-right-bg.gif" />
+    <Content Include="Content\Images\wedding-1.jpg" />
+    <Content Include="Content\Images\wedding-rings.jpg" />
     <Content Include="Content\Images\wish-tile.jpg" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\Images\up-btn.gif" />
@@ -193,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Account\EditUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutPhotos.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

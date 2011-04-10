@@ -143,7 +143,7 @@ h2
 .logo
 {
     width: 270px;
-    padding: 10px 140px 0 0;
+    padding: 0 140px 0 0;
 }
 
 .logo .title
@@ -168,7 +168,7 @@ h2
 {
     float: left;
     width: 380px;
-    padding-top: 60px;
+    padding-top: 20px;
 }
 .menu .left
 {
@@ -323,14 +323,14 @@ h2
 .slider
 {
     width: 100%;
-    height: 400px;
+    height: 450px;
     position: relative;
 }
 .slider .wrapper
 {
     width: 100%;
     overflow: auto;
-    height: 400px;
+    height: 450px;
     position: absolute;
     top: 0;
     left: 0;
