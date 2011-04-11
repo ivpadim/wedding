@@ -71,6 +71,11 @@ namespace Wedding.Mvc.Controllers
                 var createStatus = this.MembershipService.CreateUser(userData);
                 if (createStatus == MembershipCreateStatus.Success)
                 {
+                    string body = string.Format("{0} buen dia!!, <br/> Tu cuenta para accesar al sitio de Martha & Ivan Wedding " +
+                                            "<a ref='http://marthaeivan.cloudapp.net'>http://marthaeivan.cloudapp.net</a> ha sido creada" +
+                                            "<br/><br/>usuario:{1}<br/>password:{2}<br/><br/>", userData.FirstName, userData.Email, userData.Password);
+                    GmailService.Send(userData.Email, userData.Email, "Se ha creado tu cuenta :)", body);
+
                     return RedirectToAction("Index");
                 }
                 else
