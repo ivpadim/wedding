@@ -22,7 +22,7 @@
             </div>
 </script>
 <script type="text/javascript">
-     var mapping = {
+    var mapping = {
         wishes: {
             key: function (data) {
                 return ko.utils.unwrapObservable(data.RowKey);
@@ -59,4 +59,23 @@
     }
 
     GetWishes();
+
+    ko.bindingHandlers.enableLink = {
+        init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+            if(valueAccessor()){              
+                $(element).fadeIn('fast');
+            }
+            else{                
+                $(element).fadeOut('fast');
+            }
+        },
+        update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+            if(valueAccessor()){              
+                $(element).fadeIn('fast');
+            }
+            else{                
+                $(element).fadeOut('fast');
+            }
+        },
+    };
 </script>

@@ -1,12 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
+
+using Facebook.Web;
+
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.StorageClient;
 using Wedding.Mvc.Models;
 using Wedding.Mvc.Services;
+using Facebook;
+using System.Collections.Generic;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -23,8 +29,30 @@ namespace Wedding.Mvc.Controllers
             base.Initialize(requestContext);
         }
 
-        public ActionResult LogIn()
+        [ValidateInput(false)]
+        public ActionResult LogIn(string returnUrl)
         {
+            if (FacebookWebContext.Current.IsAuthenticated())
+            {
+                try
+                {
+                    var client = new FacebookWebClient();
+                    dynamic user = client.Get("me");
+                    var userData = this.MembershipService.GetUser(user.email);
+                    if (userData == null)
+                        ModelState.AddModelError("", "the facebook user name is not registered.");
+                    else
+                    {
+                        this.FormsService.SignIn(userData.Email, false, userData.ToString());
+
+                        if (Url.IsLocalUrl(returnUrl))
+                            return Redirect(returnUrl);
+                        else
+                            return RedirectToAction("Index", "Home");
+                    }
+                }
+                catch { }
+            }
             return View();
         }
 
@@ -52,8 +80,17 @@ namespace Wedding.Mvc.Controllers
 
         public ActionResult LogOff()
         {
+            if (FacebookWebContext.Current.IsAuthenticated())
+            {
+                FormsService.SignOut();
+                FacebookWebContext.Current.DeleteAuthCookie();
+                FacebookOAuthClient oauth = new FacebookOAuthClient(FacebookWebContext.Current.Settings);
+                var logoutUrl = oauth.GetLogoutUrl(new Dictionary<string, object> { { "next", "http://marthaeivan.cloudapp.net:81" } });
+
+                return Redirect(logoutUrl.AbsoluteUri);
+            }
             FormsService.SignOut();
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("Login");
         }
 
         [Authorize(Roles = "Administrator")]

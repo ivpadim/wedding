@@ -1,4 +1,5 @@
 ﻿@if (Request.IsAuthenticated)
 {
-    <text> @Context.User.Identity.Name [ @Html.ActionLink("Log Off", "LogOff", "Account")]</text>
+    <text>@Context.User.Identity.Name [ @Html.ActionLink("Edit", "EditUser", "Account")]
+    [ @Html.ActionLink("Log Off", "LogOff", "Account")]</text>
 }

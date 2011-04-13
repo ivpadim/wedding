@@ -33,12 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Facebook.5.0.9.0\lib\net40-client\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Web">
+      <HintPath>..\packages\FacebookWeb.5.0.9.0\lib\net40\Facebook.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Web.Mvc">
+      <HintPath>..\packages\FacebookWebMvc.5.0.9.0\lib\net40\Facebook.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.1\lib\40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Services" />
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -97,6 +109,7 @@
     <Content Include="Content\Images\about-us-1.jpg" />
     <Content Include="Content\Images\about-us-2.jpg" />
     <Content Include="Content\Images\about-us-3.jpg" />
+    <Content Include="Content\Images\link-back-bg.gif" />
     <Content Include="Content\Images\wedding-barcelo.jpg" />
     <Content Include="Content\Images\buton.gif" />
     <Content Include="Content\Images\contact-tile.jpg" />
@@ -202,6 +215,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_LayoutPhotos.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

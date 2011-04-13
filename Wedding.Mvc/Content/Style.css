@@ -231,6 +231,19 @@ h2
     padding-left: 35px;
     padding-bottom: 10px;
 }
+
+.link-back
+{
+    background: url(Images/link-back-bg.gif) left 0px no-repeat;
+    display: inline-block;
+    color: #FF0054;
+    line-height: 2.13em;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+}
+
 .link-margin
 {
     margin-top: 36px;
@@ -491,6 +504,7 @@ h2
     border: 0;
     color: White;
     margin-top: 10px;
+    margin-right:-4px;
     height: 30px;
     width: 150px;
 }
@@ -504,6 +518,11 @@ h2
     vertical-align: middle;
     padding: 10px;
     width: 300px;
+}
+
+.user .link-back
+{
+    font-size: 13px;
 }
 
 .user input[type=text]
@@ -523,7 +542,7 @@ h2
     color: #FF0054;
 }
 
-.user-buton
+.user-button
 {
     background-color: #FF0054;
     border: 0;
@@ -542,7 +561,7 @@ h2
 {
     width: 275px;
     height: 130px;
-    float: left;
+    float: right;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -592,8 +611,8 @@ h2
 
 .font-margin
 {
-    margin-top:20px;
-    margin-bottom:10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #E0E0E0;
     border-spacing: 2px;
 }

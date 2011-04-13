@@ -38,3 +38,12 @@ C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.dll
 C:\Proyectos\Wedding\Wedding.Mvc\obj\Debug\Wedding.Mvc.pdb
 C:\Proyectos\Wedding\Wedding.Mvc\bin\Microsoft.WindowsAzure.StorageClient.dll
 C:\Proyectos\Wedding\Wedding.Mvc\bin\Microsoft.WindowsAzure.StorageClient.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Facebook.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Facebook.Web.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Facebook.Web.Mvc.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Newtonsoft.Json.dll
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Facebook.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Facebook.Web.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Facebook.Web.Mvc.xml
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Newtonsoft.Json.pdb
+C:\Proyectos\Wedding\Wedding.Mvc\bin\Newtonsoft.Json.xml

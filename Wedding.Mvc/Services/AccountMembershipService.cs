@@ -28,11 +28,13 @@ namespace Wedding.Mvc.Services
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
 
+            userName = userName.ToLower();
             var userAuth = context.CreateQuery<UserData>("Users")
                         .Where(user => user.PartitionKey == "wedding" &&
                                                      user.Email == userName &&
                                                      user.Password == password)
-                        .SingleOrDefault();
+                        .FirstOrDefault();
+
 
             if (userAuth != null)
             {
@@ -49,6 +51,20 @@ namespace Wedding.Mvc.Services
             }
         }
 
+        public UserData GetUser(string email)
+        {
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            email = email.ToLower();
+            var userAuth = context.CreateQuery<UserData>("Users")
+                        .Where(user => user.PartitionKey == "wedding" &&
+                                                     user.Email == email)
+                        .FirstOrDefault();
+
+            return userAuth;
+        }
+
         public MembershipCreateStatus CreateUser(UserData userInfo)
         {
             if (String.IsNullOrEmpty(userInfo.Email)) throw new ArgumentException("Value cannot be null or empty.", "Email");
@@ -58,6 +74,9 @@ namespace Wedding.Mvc.Services
 
             if (String.IsNullOrEmpty(userInfo.Role))
                 userInfo.Role = "Guest";
+
+            userInfo.LastLogin = new DateTime(1900, 1, 1);
+            userInfo.Email = userInfo.Email.ToLower();
 
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
