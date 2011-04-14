@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.ServiceRuntime;
+using Microsoft.WindowsAzure.StorageClient;
 using Wedding.Mvc.Models;
 using Wedding.Mvc.Services;
-using Microsoft.WindowsAzure.ServiceRuntime;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -53,12 +53,17 @@ namespace Wedding.Mvc.Controllers
             return new EmptyResult();
         }
 
+        [HttpPost]
+        [ValidateInput(false)]
         [Authorize]
-        public ActionResult Family()
+        public ActionResult GetPhotosOfSlider()
         {
-            ViewBag.Message = "Our family page";
-            return View();
-        }
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var container = account.CreateCloudBlobClient().GetContainerReference("photo-slider");
 
+            var blobsUrl = container.ListBlobs().Select(b => new { Url = b.Uri.ToString() }).ToList();
+
+            return Json(new { blobs = blobsUrl });
+        }
     }
 }

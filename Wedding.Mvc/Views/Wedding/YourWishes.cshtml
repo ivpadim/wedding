@@ -5,13 +5,7 @@
     <div class="col-1">
         <h2 class="h2-margin">
             Your wishes</h2>
-        <div style="height: 15px; margin-bottom: 20px;">
-            <a id="prev" href="" class="link-back" style="float: left; margin-left: 10px; margin-top: -20px;"
-                data-bind='enableLink: tokens().length > 0'>anteriores</a> <a id="next" href="" class="link"
-                    style="float: right; margin-right: 20px; margin-top: -20px;" data-bind='enableLink: hasMore()'>
-                    siguientes</a>
-        </div>
-        @Html.Partial("_YourWishes")
+        @Html.Partial("_YourWishes", true)
     </div>
     <div class="col-2">
         <h2 class="h2-margin">

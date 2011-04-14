@@ -3,7 +3,7 @@
         return index + "";
     }
 
-    $(function () {
+    function beginSlider() {
         $('.slider').anythingSlider({
             easing: "easeInOutExpo",        // Anything other than "linear" or "swing" requires the easing plugin
             autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
@@ -17,20 +17,40 @@
             stopText: "Stop",               // Stop text
             navigationFormatter: formatText       // Details at the top of the file on this use (advanced use)
         });
+    }
 
+    $(function () {
+
+        var mapping = {
+            blobs: {
+                key: function (data) {
+                    return ko.utils.unwrapObservable(data.Url);
+                }
+            }
+        };
+
+        var viewModel = ko.mapping.fromJS({
+            blobs: []
+        }, mapping);
+
+        ko.applyBindings(viewModel, document.getElementById('photo-slider'));
+
+        $.post('/Home/GetPhotosOfSlider', {},
+            function (data) {
+                ko.mapping.updateFromJS(viewModel, data);
+                beginSlider();
+            });
     });
 </script>
 <div class="slider">
     <div class="wrapper" style="overflow-x: hidden; overflow-y: hidden;">
-        <ul>
-            <li class="cloned">           
-                <img src="@Url.Content("~/Content/Images/slide1.jpg")" alt="" /></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide2.jpg")" alt="" /></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide3.jpg")" alt="" /></li>
-            <li>
-                <img src="@Url.Content("~/Content/Images/slide4.jpg")" alt="" /></li>
+        <ul id="photo-slider" data-bind="template: {
+            name: 'sliderTemplate',
+            foreach: blobs
+        }">
         </ul>
     </div>
 </div>
+<script type="text/html" id="sliderTemplate">
+         <li><img src="${Url}" alt=""/></li>
+</script>

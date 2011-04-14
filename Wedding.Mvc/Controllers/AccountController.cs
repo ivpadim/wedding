@@ -1,18 +1,18 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 
+using Facebook;
 using Facebook.Web;
 
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.StorageClient;
+
 using Wedding.Mvc.Models;
 using Wedding.Mvc.Services;
-using Facebook;
-using System.Collections.Generic;
 
 namespace Wedding.Mvc.Controllers
 {
@@ -32,15 +32,20 @@ namespace Wedding.Mvc.Controllers
         [ValidateInput(false)]
         public ActionResult LogIn(string returnUrl)
         {
+            //On the refresh check if the user is logged in with facebook
             if (FacebookWebContext.Current.IsAuthenticated())
             {
                 try
                 {
                     var client = new FacebookWebClient();
                     dynamic user = client.Get("me");
+
                     var userData = this.MembershipService.GetUser(user.email);
+
                     if (userData == null)
-                        ModelState.AddModelError("", "the facebook user name is not registered.");
+                    {
+                        ModelState.AddModelError("", "the facebook user name is not registered.");                        
+                    }
                     else
                     {
                         this.FormsService.SignIn(userData.Email, false, userData.ToString());
@@ -82,11 +87,11 @@ namespace Wedding.Mvc.Controllers
         {
             if (FacebookWebContext.Current.IsAuthenticated())
             {
-                FormsService.SignOut();
                 FacebookWebContext.Current.DeleteAuthCookie();
                 FacebookOAuthClient oauth = new FacebookOAuthClient(FacebookWebContext.Current.Settings);
-                var logoutUrl = oauth.GetLogoutUrl(new Dictionary<string, object> { { "next", "http://marthaeivan.cloudapp.net:81" } });
+                var logoutUrl = oauth.GetLogoutUrl(new Dictionary<string, object> { { "next", Request.UrlReferrer.AbsoluteUri.ToString() } });
 
+                FormsService.SignOut();
                 return Redirect(logoutUrl.AbsoluteUri);
             }
             FormsService.SignOut();
@@ -110,7 +115,9 @@ namespace Wedding.Mvc.Controllers
                 {
                     string body = string.Format("{0} buen dia!!, <br/> Tu cuenta para accesar al sitio de Martha & Ivan Wedding " +
                                             "<a ref='http://marthaeivan.cloudapp.net'>http://marthaeivan.cloudapp.net</a> ha sido creada" +
-                                            "<br/><br/>usuario:{1}<br/>password:{2}<br/><br/>", userData.FirstName, userData.Email, userData.Password);
+                                            "<br/><br/>usuario:{1}<br/>password:{2}<br/><br/>" +
+                                            "Tambien puedes entrar usando tu cuenta de facebook siempre y cuando el correo coincida."
+                                            , userData.FirstName, userData.Email, userData.Password);
                     GmailService.Send(userData.Email, userData.Email, "Se ha creado tu cuenta :)", body);
 
                     return RedirectToAction("Index");
