@@ -43,7 +43,7 @@
 #home-page .col-1
 {
     width: 285px;
-    margin-right:5px;
+    margin-right: 5px;
 }
 #home-page .col-2
 {
@@ -76,12 +76,12 @@
 
 #wedding-page .col-1
 {
-    width: 325px;
+    width: 540px;
+    padding-right:20px;
 }
 #wedding-page .col-2
 {
-    width: 560px;
-    margin-left: 10px;
+    width: 325px;
 }
 
 #wishes-page .col-1
