@@ -15,6 +15,8 @@ namespace Wedding.Mvc
 
             var wishesCreated = account.CreateCloudTableClient().CreateTableIfNotExist("Wishes");
             var usersCreated = account.CreateCloudTableClient().CreateTableIfNotExist("Users");
+            var newsCreated = account.CreateCloudTableClient().CreateTableIfNotExist("News");
+
             var context = account.CreateCloudTableClient().GetDataServiceContext();
             
             if (usersCreated)

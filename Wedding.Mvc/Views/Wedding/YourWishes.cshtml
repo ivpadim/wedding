@@ -4,17 +4,17 @@
 <div id="wishes-page">
     <div class="col-1">
         <h2 class="h2-margin">
-            Your wishes</h2>
+           Tus dedicatorias</h2>
         @Html.Partial("_YourWishes", true)
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
-            Agrega el tuyo</h2>
+            Agreganos una</h2>
         <div class="col-indent">
             <img src="@Url.Content("~/Content/Images/wish-tile.jpg")" alt="" />
             <p class="font2">
-                En este apartado puedes compartirnos cualquier deseo que tengas para esta nueva
-                etapa de nuestras vidas. GRACIAS POR TU AMISTAD.
+                En este apartado puedes compartirnos y dedicarnos unas palabras ya sea cualquier deseo que tengas para esta nueva
+                etapa de nuestras vidas, comentario etc. GRACIAS POR TU AMISTAD.
                 <br />
                 <br />
                 Si ya escribiste algun deseo y quieres modificarlo vuelve a agregarlo aqui.
@@ -47,17 +47,5 @@
         $('#comment').val('');
         RefreshWishes();
     }
-    $(function () {
-        $('#next').click(function () {
-            viewModel.tokens.unshift(ko.utils.unwrapObservable(viewModel.nextToken));
-            GetWishes();
-            return false;
-        });
-        $('#prev').click(function () {
-            viewModel.tokens.shift();
-            GetWishes();
-            return false;
-        });
-    });
-    $('#prev').hide();
+   
 </script>

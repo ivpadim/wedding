@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Noticias";
+}
+<div id="news-page">
+    <div class="col-1">
+        <h2 class="h2-margin">
+            Ultimas Noticias</h2>
+        @Html.Partial("_News", true)
+    </div>
+    <div class="col-2">
+        <h2 class="h2-margin">
+            Informacion</h2>
+        <div class="col-indent">
+            <img src="@Url.Content("~/Content/Images/wish-tile.jpg")" alt="" />
+            <p class="font2">
+                En este apartado puedes encontrar informacion relevante sobre las ultimas noticias
+                de la boda, actualizaciones de contenido, etcetera.
+                <br />
+                <br />
+                Mantente informado para que no te agarren desprevenido jejeje.
+            </p>
+            <br />
+            @using (Ajax.BeginForm("AddNews", null, new AjaxOptions { OnSuccess = "OnNewsAdded" }, new { @id = "form-news" }))
+            {
+                if (Context.User.IsInRole("Administrator") == true)
+                { 
+                    
+                <strong class="instruction">Agrega una noticia:</strong>  <text>(200 chars maximo)</text>
+                <br />
+                <br />                
+                @Html.TextBox("title", "", new { @class = "add-newsTitle" })
+                <br />
+                @Html.TextArea("body", new { @class = "add-newsBody", rows = "6", cols = "1", onkeypress = "if(this.value.length>200)return false;", onblur = "if(this.value.length>200)this.value=this.value.substr(0,250);" })
+                <div class="alignright">
+                    <a href="#" class="link" onclick="$('#form-news').reset();return
+                false;">borrar</a> <a href="#" class="link" onclick="$('#form-news').submit();return
+                false;">enviar</a>
+                </div>             
+                }
+
+            }
+            <script type="text/javascript">
+                function RefreshNews() {
+                    $.post('/News/GetLatestNews', {},
+                        function (data) {
+                            ko.mapping.updateFromJS(viewModel, data);
+                        });
+                }
+
+                function OnNewsAdded(e) {
+                    $('#title').val('');
+                    $('#body').val('');
+                    RefreshNews();
+                }   
+            </script>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Martha & Ivan - @ViewBag.Title</title>
+    <title>Martha & Ivan Wedding - @ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Style.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/Layout.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Content/Scripts/jquery-1.4.4.js")" type="text/javascript"></script>
@@ -46,15 +46,15 @@
             </td>
             <td>
                 <div class="menu">
-                    <ul class="left">
-                        <li class="@Html.Partial("_OnActiveLink", "Home")">@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "About us")">@Html.ActionLink("About us", "About", "Home")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Wedding")">@Html.ActionLink("Wedding", "Index", "Wedding")</li>
+                      <ul class="left">
+                        <li class="@Html.Partial("_OnActiveLink", "Home")">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "About us")">@Html.ActionLink("Nosotros", "About", "Home")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Contact")">@Html.ActionLink("Contacto", "Contact", "Home")</li>
                     </ul>
                     <ul class="right">
-                        <li class="@Html.Partial("_OnActiveLink", "Your wishes")">@Html.ActionLink("Your wishes", "YourWishes", "Wedding")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Contact")">@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Links")">@Html.ActionLink("Links", "About", "Home")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Wedding")">@Html.ActionLink("Wedding", "Index", "Wedding")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Your wishes")">@Html.ActionLink("Dedicatorias", "YourWishes", "Wedding")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Noticias")">@Html.ActionLink("Noticias", "Index", "News")</li>
                     </ul>
                 </div>
             </td>

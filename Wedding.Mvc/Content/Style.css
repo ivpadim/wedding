@@ -640,3 +640,37 @@ h2
 {
     padding: 5px 1px 5px 0;
 }
+
+
+.news
+{
+    float: left;
+}
+
+.newsLine
+{
+    width: 560px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.add-newsBody
+{
+    width: 270px;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-top: 2px;
+    margin-bottom: 20px;
+}
+
+
+.add-newsTitle
+{
+    width: 270px;
+    height: 20px;
+    font-size: .9em;
+    padding-left: 5px;
+    padding-top: 2px;
+    margin-bottom: 20px;
+}

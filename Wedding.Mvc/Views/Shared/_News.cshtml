@@ -1,21 +1,13 @@
-﻿<div id="wishes">
-    @{
-        if (Model != null)
-        {
-            if ((bool)Model)
-            { 
-        <div style="height: 15px; margin-bottom: 20px;">
-            <a id="prev" href="" class="link-back" style="float: left; margin-left: 10px; margin-top: -20px;"
-                data-bind='enableLink: tokens().length > 0'>anteriores</a> <a id="next" href="" class="link"
-                    style="float: right; margin-right: 20px; margin-top: -20px;" data-bind='enableLink: hasMore()'>
-                    siguientes</a>
-        </div>         
-            }
-        }
-    }
-    <div class="wishes" data-bind="template: {
-            name: 'wishTemplate',
-            foreach: wishes,
+﻿<div id="news">
+    <div style="height: 15px; margin-bottom: 20px;">
+        <a id="prev" href="" class="link-back" style="float: left; margin-left: 10px; margin-top: -20px;"
+            data-bind='enableLink: tokens().length > 0'>anteriores</a> <a id="next" href="" class="link"
+                style="float: right; margin-right: 20px; margin-top: -20px;" data-bind='enableLink: hasMore()'>
+                siguientes</a>
+    </div>
+    <div class="news" data-bind="template: {
+            name: 'newsTemplate',
+            foreach: news,
             beforeRemove: function(elem) { 
                 $(elem).fadeOut('slow');
             },
@@ -26,20 +18,22 @@
         }">
     </div>
 </div>
-<script type="text/html" id="wishTemplate">
-         <div class="wish">
+<script type="text/html" id="newsTemplate">
+         <div class="newsLine">
                 <div class="container">
-                    <strong class="title"><strong><strong>${From}</strong></strong></strong> <strong
-                        class="title1">escribio:</strong>
+                    <strong class="title"><strong><strong>${Title}</strong></strong></strong> <strong
+                        class="title1"> ${PublishDate}</strong>
                 </div>
                 <div class="font">
-                    ${Message}
+                    ${Body}
+                    <br/>                   
+                    <div class="h2-margin"><div>
                 </div>
             </div>
 </script>
 <script type="text/javascript">
     var mapping = {
-        wishes: {
+        news: {
             key: function (data) {
                 return ko.utils.unwrapObservable(data.RowKey);
             }
@@ -49,20 +43,20 @@
         nextToken: null,
         hasMore: true,
         tokens: [],
-        wishes: []
+        news: []
     }, mapping);
 
-    ko.applyBindings(viewModel, document.getElementById('wishes'));
+    ko.applyBindings(viewModel, document.getElementById('news'));
 
-    function GetWishes()
+    function GetLatestNews()
     {
-        $.post('/Wedding/GetYourWishes', { token: viewModel.tokens()[0] },
+        $.post('/News/GetLatestNews', { token: viewModel.tokens()[0] },
             function (data) {
                 ko.mapping.updateFromJS(viewModel, data);               
             });
     }
 
-    GetWishes();
+    GetLatestNews();
 
     ko.bindingHandlers.enableLink = {
         init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
@@ -86,15 +80,14 @@
      $(function () {
         $('#next').click(function () {
             viewModel.tokens.unshift(ko.utils.unwrapObservable(viewModel.nextToken));
-            GetWishes();
+            GetLatestNews();
             return false;
         });
         $('#prev').click(function () {
             viewModel.tokens.shift();
-            GetWishes();
+            GetLatestNews();
             return false;
         });
     });
     $('#prev').hide();
-
 </script>
