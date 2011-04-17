@@ -27,7 +27,6 @@ namespace Wedding.Mvc.Controllers
             return View();
         }
 
-
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
@@ -37,7 +36,7 @@ namespace Wedding.Mvc.Controllers
             var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
             var context = account.CreateCloudTableClient().GetDataServiceContext();
 
-            var count = Request.UrlReferrer.OriginalString.ToLower().Contains("wedding") ? 8 : 4;
+            var count = Request.UrlReferrer.OriginalString.ToLower().Contains("wedding") ? 8 : 6;
 
             var query = context.CreateQuery<Wish>("Wishes")
                                 .Where(w => w.PartitionKey == "wedding")
@@ -92,12 +91,18 @@ namespace Wedding.Mvc.Controllers
             return new EmptyResult();
         }
 
-
         [Authorize]
         public ActionResult PhotoAlbum()
         {
             ViewBag.Message = "Photo Album";
 
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Music()
+        {
+            ViewBag.Message = "Music page";
             return View();
         }
     }

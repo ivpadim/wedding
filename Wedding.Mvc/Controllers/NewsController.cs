@@ -50,6 +50,7 @@ namespace Wedding.Mvc.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [Authorize(Roles = "Administrator")]
         public ActionResult AddNews(string title, string body)
         {

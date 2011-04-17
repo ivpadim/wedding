@@ -46,15 +46,16 @@
             </td>
             <td>
                 <div class="menu">
-                      <ul class="left">
+                    <ul class="left">
                         <li class="@Html.Partial("_OnActiveLink", "Home")">@Html.ActionLink("Inicio", "Index", "Home")</li>
                         <li class="@Html.Partial("_OnActiveLink", "About us")">@Html.ActionLink("Nosotros", "About", "Home")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Contact")">@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Wedding")">@Html.ActionLink("Boda", "Index", "Wedding")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Your wishes")">@Html.ActionLink("Tus Deseos", "YourWishes", "Wedding")</li>
                     </ul>
                     <ul class="right">
-                        <li class="@Html.Partial("_OnActiveLink", "Wedding")">@Html.ActionLink("Wedding", "Index", "Wedding")</li>
-                        <li class="@Html.Partial("_OnActiveLink", "Your wishes")">@Html.ActionLink("Dedicatorias", "YourWishes", "Wedding")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Music")">@Html.ActionLink("Música", "Music", "Wedding")</li>
                         <li class="@Html.Partial("_OnActiveLink", "Noticias")">@Html.ActionLink("Noticias", "Index", "News")</li>
+                        <li class="@Html.Partial("_OnActiveLink", "Contact")">@Html.ActionLink("Contacto", "Contact", "Home")</li>
                     </ul>
                 </div>
             </td>

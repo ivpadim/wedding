@@ -4,28 +4,29 @@
 <div id="wishes-page">
     <div class="col-1">
         <h2 class="h2-margin">
-           Tus dedicatorias</h2>
+            Tus deseos</h2>
         @Html.Partial("_YourWishes", true)
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
-            Agreganos una</h2>
+            Escribenos</h2>
         <div class="col-indent">
             <img src="@Url.Content("~/Content/Images/wish-tile.jpg")" alt="" />
             <p class="font2">
-                En este apartado puedes compartirnos y dedicarnos unas palabras ya sea cualquier deseo que tengas para esta nueva
-                etapa de nuestras vidas, comentario etc. GRACIAS POR TU AMISTAD.
+                En este apartado puedes compartirnos y dedicarnos unas palabras ya sea cualquier
+                deseo que tengas para esta nueva etapa de nuestras vidas, comentario etc. GRACIAS
+                por formar parte de esta celebración.
                 <br />
                 <br />
-                Si ya escribiste algun deseo y quieres modificarlo vuelve a agregarlo aqui.
+                Si ya escribiste algun deseo y quieres modificarlo vuelve a agregarlo aquí.
             </p>
             <br />
-            <strong class="instruction">Agrega tu deseo:</strong> (200 chars maximo)
+            <strong class="instruction">Escribenos un deseo:</strong> (220 chars maximo)
             <br />
             <br />
             @using (Ajax.BeginForm("AddWish", null, new AjaxOptions { OnSuccess = "OnWishAdded" }, new { @id = "form-wish" }))
             {   
-                @Html.TextArea("comment", new { @class = "add-wish", rows = "6", cols = "1", onkeypress = "if(this.value.length>200)return false;", onblur = "if(this.value.length>200)this.value=this.value.substr(0,250);" })
+                @Html.TextArea("comment", new { @class = "add-wish", rows = "6", cols = "1", onblur = "if(this.value.length>220)this.value=this.value.substr(0,220);" })
                 <div class="alignright">
                     <a href="#" class="link" onclick="$('#comment').val('');return false;">borrar</a>
                     <a href="#" class="link" onclick="$('#form-wish').submit();return false;">enviar</a>

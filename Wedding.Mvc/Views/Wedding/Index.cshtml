@@ -4,7 +4,7 @@
 <div id="wedding-page">
     <div class="col-1">
         <h2 class="h2-margin">
-            Reservaciones</h2>
+            Nuestra Boda</h2>
         <div class="col-indent">
             <span class="font2">Para su comodidad en esta sección les proporcionamos información
                 útil para su estancia en la Riviera Maya.
@@ -20,7 +20,7 @@
             <br />
         </div>
         <h2 class="h2-margin">
-            Tarifa</h2>
+            Reservaciones</h2>
         <div class="col-indent">
             <span class="font2">La tarifa que se otorga para el evento es de $1,200 x persona y
                 x noche sin embargo para que esta sea respetada es <strong>indispensable</strong>
@@ -49,7 +49,7 @@
                             Email:
                         </td>
                         <td align="right">
-                            sac7.op1@barcelo.com
+                            <a href="mailto:sac7.op1@barcelo.com">sac7.op1@barcelo.com</a>
                         </td>
                     </tr>
                     <tr>
@@ -99,7 +99,7 @@
                             $1,920.00
                         </td>
                         <td>
-                            <strong>$1,200.00</strong>
+                            <strong class="instruction">$1,200.00</strong>
                         </td>
                         <td>
                             $840.00
@@ -124,10 +124,7 @@
                 <br />
                 • La tarifa especial otorgada este grupo, se respetara únicamente a los invitados
                 a la boda, 03 días antes y 03 días después a los días del evento.
-                <br />
-                • En caso de que algún invitado esté hospedado en el hotel sede y su reserva y pago
-                de habitación haya sido bajo otra fuente (agencia de viajes o chartera) es tarifa
-                no se respeta
+                <br />                
                 <br />
                 <br />
                 <strong>*TARIFA TODO INCLUIDO:</strong>
@@ -146,9 +143,9 @@
         <h2 class="h2-margin">
             Formas de Pago</h2>
         <div class="col-indent">
-            <span class="font2">Para beneficio de ustedes se negoció con el Resort que su reservación
-                pueda ser pagada mediante tres pagos donde podrán depositar a la cuenta adjunta
-                según las fechas estipuladas a continuación:
+            <span class="font2">Para mayor facilidad la reservación pueda ser pagada mediante tres
+                pagos donde podrán depositar a la cuenta adjunta según las fechas estipuladas a
+                continuación:
                 <br />
                 <br />
                 1er pago: 25 de Septiembre de 2011<br />
@@ -202,9 +199,9 @@
                 <br />
                 <br />
                 Dicha cuenta es del hotel y cada invitado deberá enviar su ó sus comprobantes de
-                pago en un mismo mail sac7.op1@barcelo.com escaneando las diversas fichas de depósito
-                y enviarlas al ejecutivo del Call Center que atendió su llamada y confirmo su reservación.
-            </span>
+                pago en un mismo mail <a href="mailto:sac7.op1@barcelo.com">sac7.op1@barcelo.com</a>
+                escaneando las diversas fichas de depósito y enviarlas al ejecutivo del Call Center
+                que atendió su llamada y confirmo su reservación. </span>
             <br />
             <br />
         </div>
@@ -213,28 +210,40 @@
         <h2 class="h2-margin">
             Ceremonia</h2>
         <div class="col-indent">
-            <span class="font2">El <strong>Barceló Maya Tropical</strong> sera cede de nuestra boda
-                el <strong class="instruction">sabado 3 de diciembre</strong> dicho resort esta
-                ubicado en la <strong>Riviera Maya</strong> a 25 km de Playa del Carmen. </span>
-            <br />
-            <br />
-            <span>La ceremonia religiosa sera en la Capilla "Iglesia de Nuestra Señora de Guadalupe"
-                ubicada dentro del complejo a las 4:00 pm </span>
-            <br />
-            <br />
-            <iframe title="YouTube video player" width="300" height="250" src="http://www.youtube.com/embed/484xGtMXM90"
-                frameborder="0" allowfullscreen></iframe>
-            <br />
-            <br />
-            <br />
-            @{
-                var weddingDate = new DateTime(2011, 12, 3);
-                var countDown = weddingDate.Subtract(DateTime.Now).Days;
-            }
-            <div class="countdown">
-                <strong class="title1">faltan</strong> <strong class="title3">@countDown</strong>
-                <strong class="title1">dias</strong>
-            </div>
+            <span class="font2">El <strong>Barceló Maya Tropical</strong> será cede de nuestra boda
+                el <strong class="instruction">sábado 3 de diciembre</strong> dicho resort está
+                ubicado en la <strong>Riviera Maya a 25 km de Playa del Carmen</strong>.
+                <br />
+                <br />
+                <span class="font2">La ceremonia religiosa será en la Capilla "Iglesia de Nuestra Señora de Guadalupe"
+                    ubicada dentro del complejo a las 4:00 pm </span>
+                <br />
+                <br />
+                <span class="font2">Posteriormente tendremos la recepción en la palapa Palmeras Grill a las 8:00 pm
+                </span>
+                <br />
+                <br />
+                <iframe title="YouTube video player" width="300" height="250" src="http://www.youtube.com/embed/484xGtMXM90"
+                    frameborder="0" allowfullscreen></iframe>
+                <br />
+                <br />
+                <br />
+                <a class="link" href="http://www.barcelomayatropicalbeach.com" target="_blank">página  del barcelo</a>
+                <br />
+                @{
+                    var weddingDate = new DateTime(2011, 12, 3);
+                    var countDown = weddingDate.Subtract(DateTime.Now).Days;
+                }
+                <div class="countdown">
+                    <strong class="title1">faltan</strong> <strong class="title3">@countDown</strong>
+                    <strong class="title1">dias</strong>
+                </div>
+                <br />
+                <strong class="instruction">Nota:</strong> Para los invitados que no se hospeden
+                en el hotel cede, favor de considerar que para entrar a las instalaciones del Resort
+                hay una cuota de 89 usd x persona (Day Pass)... favor de avisarnos con anticipación
+                para evitar cualquier contratiempo.
+                <br />
         </div>
     </div>
 </div>

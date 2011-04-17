@@ -4,24 +4,24 @@
 <script type="text/javascript">
     function OnContactUs() {
         $('#comment').val('');
-        alert('Se ha enviado tu mensaje :)');
+        alert('Se ha enviado tu comentario :)');
     }
 </script>
 <div id="contact-page">
     <div class="col-1">
         <h2 class="h2-margin">
-            Forma de contacto</h2>
+            Contáctanos aquí</h2>
         <div class="col-indent">
             <div>
-                Si deseas puedes enviarnos cualquier duda o comentario que tengas, solo escribelo
-                en la siguiente area y envialo.
+                Escríbenos cualquier duda o comentario que tengas acerca del evento, reservaciones,
+                hospedaje, etc. Nosotros te responderemos a la brevedad.
                 <br />
                 <br />
                 @using (Ajax.BeginForm("Contact", null, new AjaxOptions { OnSuccess = "OnContactUs" }, new { @id = "form-contact" }))
                 {   
-                    @Html.TextArea("comment", "Message:", new { rows = "1", cols = "1", onblur = "if(this.value=='') this.value='Message:'", onfocus = "if(this.value =='Message:' ) this.value=''" })
+                    @Html.TextArea("comment", "Comentario:", new { rows = "1", cols = "1", onblur = "if(this.value=='') this.value='Comentario:'", onfocus = "if(this.value =='Comentario:' ) this.value=''" })
                     <div class="alignright">
-                        <a href="#" class="link" onclick="$('#comment').val('Message:');return false;">borrar</a>
+                        <a href="#" class="link" onclick="$('#comment').val('Comentario:');return false;">borrar</a>
                         <a href="#" class="link" onclick="$('#form-contact').submit();return false;">enviar</a>
                     </div>
                 }
@@ -30,15 +30,13 @@
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
-            Informacion Personal</h2>
+            Información Personal</h2>
         <div class="col-indent">
-            <span>Para cualquier duda estamos a tus ordenes, no dudes en contactarnos recuerda no
-                dejes para manana lo que puedes hacer hoy a traves de un correo o una llamada.
+            <span>Para cualquier duda estamos a tus ordenes y te compartimos nuestro correo electrónico
+                personal así como nuestros números de celular.
                 <br />
                 <br />
-                Te listamos a continuacion nuestros telefonos y correos personales, por favor dale
-                un uso adecuado y no lo compartas con la chusma!! ah tambien puedes usar la forma
-                de contacto que esta a tu izquierda.
+                <br />
                 <br />
                 <br />
             </span>
@@ -46,7 +44,7 @@
                 <table>
                     <tr>
                         <td colspan="2" class="font-margin">
-                            <strong>Martha & Ivan</strong>
+                            <strong>Martha & Ivan Wedding</strong>
                         </td>
                     </tr>
                     <tr>
@@ -54,7 +52,7 @@
                             Email
                         </td>
                         <td align="right">
-                            marthaeivan@gmail.com
+                            <a href="mailto:marthaeivan@gmail.com">marthaeivan@gmail.com</a>
                         </td>
                     </tr>
                     <tr>

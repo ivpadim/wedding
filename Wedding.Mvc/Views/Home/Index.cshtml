@@ -8,11 +8,11 @@
         <div class="col-indent">
             Como saben para nosotros esta por comenzar una nueva etapa en nuestras vidas y queremos
             que sean parte de ella en la celebración del proximo 3 de Diciembre de 2011 en el
-            magico lugar de Riviera Maya,
+            mágico lugar de Riviera Maya,
         </div>
         <br />
         <div class="col-indent">
-            A continuacion encontraran datos memorables para nosotros, informacion de la ceremonia,
+            A continuación encontraran datos memorables para nosotros, información de la ceremonia,
             hospedaje y sugerencias.
         </div>
         <br />
@@ -28,16 +28,22 @@
             <strong class="title1">dias</strong>
         </div>
         <div class="col-indent">
-            y queremos que nos acompañen en el dia mas importante en nuestras vidas. GRACIAS!!
+            y queremos que nos acompañen en el día mas importante en nuestras vidas. GRACIAS!!
         </div>
         <br />
+        <div class="col-indent">
+            { Esten al pendiente de nuestras actualizaciones quincenales ya que subiremos más
+            información de nuestro evento, esto es un pre comienzo... }
+        </div>
         <br />
         @Html.ActionLink("nuestra historia", "About", "Home", null, new { @class = "link" })<br />
+        @Html.ActionLink("info de la boda", "Index", "Wedding", null, new { @class = "link" })<br />
+        @Html.ActionLink("ultimas noticias", "Index", "News", null, new { @class = "link" })<br />
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
-            Tus dedicatorias, Gracias!!</h2>
+            Tus deseos, Gracias!!</h2>
         @Html.Partial("_YourWishes")
-        @Html.ActionLink("agreganos una", "YourWishes", "Wedding", null, new { @class = "link", style = "margin-top:15px;" })
+        @Html.ActionLink("escribenos uno", "YourWishes", "Wedding", null, new { @class = "link", style = "margin-top:15px;" })
     </div>
 </div>

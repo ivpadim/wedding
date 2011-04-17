@@ -50,7 +50,7 @@ ul
 html, textarea
 {
     font-family: Calibri;
-    font-size: .84em;
+    font-size: .85em;
     line-height: 1.2em;
     color: #414141;
 }
@@ -560,7 +560,7 @@ h2
 .wish
 {
     width: 275px;
-    height: 130px;
+    height: 135px;
     float: right;
     margin-left: 5px;
     margin-right: 5px;

@@ -99,6 +99,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\SongRequestModel.cs" />
     <Compile Include="Models\NewsModel.cs" />
     <Compile Include="Models\WishModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,14 +109,13 @@
     <Compile Include="WeddingWebRole.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Images\about-us-1.jpg" />
-    <Content Include="Content\Images\about-us-2.jpg" />
-    <Content Include="Content\Images\about-us-3.jpg" />
+    <Content Include="Content\Images\about-us.jpg" />
     <Content Include="Content\Images\buton.gif" />
-    <Content Include="Content\Images\contact-tile.jpg" />
     <Content Include="Content\Images\link-back-bg.gif" />
     <Content Include="Content\Images\link-bg.gif" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\music-tile.jpg" />
+    <Content Include="Content\Images\news-tile.jpg" />
     <Content Include="Content\Images\pagination-a-bg-hover.gif" />
     <Content Include="Content\Images\pagination-a-bg.gif" />
     <Content Include="Content\Images\stop-buton.gif" />
@@ -217,7 +217,7 @@
     <Content Include="Views\News\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_News.cshtml" />
+    <Content Include="Views\Wedding\Music.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

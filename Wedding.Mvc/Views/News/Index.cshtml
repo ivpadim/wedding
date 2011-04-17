@@ -5,16 +5,108 @@
     <div class="col-1">
         <h2 class="h2-margin">
             Ultimas Noticias</h2>
-        @Html.Partial("_News", true)
+        <div id="news">
+            <div style="height: 15px; margin-bottom: 20px;">
+                <a id="prev" href="" class="link-back" style="float: left; margin-left: 10px; margin-top: -20px;"
+                    data-bind='enableLink: tokens().length > 0'>anteriores</a> <a id="next" href="" class="link"
+                        style="float: right; margin-right: 20px; margin-top: -20px;" data-bind='enableLink: hasMore()'>
+                        siguientes</a>
+            </div>
+            <div class="news" data-bind="template: {
+            name: 'newsTemplate',
+            foreach: news,
+            beforeRemove: function(elem) { 
+                $(elem).fadeOut('slow');
+            },
+            afterAdd: function(elem) {
+                $(elem).fadeIn('slow');
+                 cufonize();
+            }
+        }">
+            </div>
+        </div>
+        <script type="text/html" id="newsTemplate">
+         <div class="newsLine">
+                <div class="container">
+                    <strong class="title"><strong><strong>${Title}</strong></strong></strong> <strong
+                        class="title1"> ${PublishDate}</strong>
+                </div>
+                <div class="font">
+                    ${Body}
+                    <br/>                   
+                    <div class="h2-margin"><div>
+                </div>
+            </div>
+        </script>
+        <script type="text/javascript">
+            var mapping = {
+                news: {
+                    key: function (data) {
+                        return ko.utils.unwrapObservable(data.RowKey);
+                    }
+                }
+            };
+            var viewModel = ko.mapping.fromJS({
+                nextToken: null,
+                hasMore: true,
+                tokens: [],
+                news: []
+            }, mapping);
+
+            ko.applyBindings(viewModel, document.getElementById('news'));
+
+            function GetLatestNews()
+            {
+                $.post('/News/GetLatestNews', { token: viewModel.tokens()[0] },
+                    function (data) {
+                        ko.mapping.updateFromJS(viewModel, data);               
+                    });
+            }
+
+            GetLatestNews();
+
+            ko.bindingHandlers.enableLink = {
+                init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+                    if(valueAccessor()){              
+                        $(element).fadeIn('fast');
+                    }
+                    else{                
+                        $(element).fadeOut('fast');
+                    }
+                },
+                update: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+                    if(valueAccessor()){              
+                        $(element).fadeIn('fast');
+                    }
+                    else{                
+                        $(element).fadeOut('fast');
+                    }
+                },
+            };
+
+             $(function () {
+                $('#next').click(function () {
+                    viewModel.tokens.unshift(ko.utils.unwrapObservable(viewModel.nextToken));
+                    GetLatestNews();
+                    return false;
+                });
+                $('#prev').click(function () {
+                    viewModel.tokens.shift();
+                    GetLatestNews();
+                    return false;
+                });
+            });
+            $('#prev').hide();
+        </script>
     </div>
     <div class="col-2">
         <h2 class="h2-margin">
-            Informacion</h2>
+            Información</h2>
         <div class="col-indent">
-            <img src="@Url.Content("~/Content/Images/wish-tile.jpg")" alt="" />
+            <img src="@Url.Content("~/Content/Images/news-tile.jpg")" alt="" />
             <p class="font2">
-                En este apartado puedes encontrar informacion relevante sobre las ultimas noticias
-                de la boda, actualizaciones de contenido, etcetera.
+                En este apartado puedes encontrar información relevante sobre las ultimas noticias
+                de la boda, actualizaciones de contenido, etc.
                 <br />
                 <br />
                 Mantente informado para que no te agarren desprevenido jejeje.
@@ -25,12 +117,12 @@
                 if (Context.User.IsInRole("Administrator") == true)
                 { 
                     
-                <strong class="instruction">Agrega una noticia:</strong>  <text>(200 chars maximo)</text>
+                <strong class="instruction">Agrega una noticia:</strong>
                 <br />
                 <br />                
                 @Html.TextBox("title", "", new { @class = "add-newsTitle" })
                 <br />
-                @Html.TextArea("body", new { @class = "add-newsBody", rows = "6", cols = "1", onkeypress = "if(this.value.length>200)return false;", onblur = "if(this.value.length>200)this.value=this.value.substr(0,250);" })
+                @Html.TextArea("body", new { @class = "add-newsBody", rows = "6", cols = "1" })
                 <div class="alignright">
                     <a href="#" class="link" onclick="$('#form-news').reset();return
                 false;">borrar</a> <a href="#" class="link" onclick="$('#form-news').submit();return
