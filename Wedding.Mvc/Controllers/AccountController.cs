@@ -43,11 +43,10 @@ namespace Wedding.Mvc.Controllers
                     var userData = this.MembershipService.GetUser(user.email);
 
                     if (userData == null)
-                    {
-                        ModelState.AddModelError("", "the facebook user name is not registered.");                        
-                    }
+                        ModelState.AddModelError("", "the facebook user name is not registered.");
                     else
                     {
+                        this.MembershipService.UpdateLastLogin(userData.Email);
                         this.FormsService.SignIn(userData.Email, false, userData.ToString());
 
                         if (Url.IsLocalUrl(returnUrl))
@@ -115,12 +114,12 @@ namespace Wedding.Mvc.Controllers
                 {
                     string body = string.Format("{0} buen dia!!, <br/> Tu cuenta para accesar al sitio de Martha & Ivan Wedding " +
                                             "<a ref='http://marthaeivan.cloudapp.net'>http://marthaeivan.cloudapp.net</a> ha sido creada" +
-                                            "<br/><br/>usuario:{1}<br/>password:{2}<br/><br/>" +
+                                            "<br/><br/>usuario:  {1}<br/>password:  {2}<br/><br/>" +
                                             "Tambien puedes entrar usando tu cuenta de facebook siempre y cuando el correo coincida."
                                             , userData.FirstName, userData.Email, userData.Password);
                     GmailService.Send(userData.Email, userData.Email, "Se ha creado tu cuenta :)", body);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("CreateUser");
                 }
                 else
                 {

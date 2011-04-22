@@ -38,11 +38,7 @@ namespace Wedding.Mvc.Services
 
             if (userAuth != null)
             {
-                userAuth.LastLogin = DateTime.Now;
-                context.UpdateObject(userAuth);
-                context.SaveChangesWithRetries();
-
-                User = userAuth;
+                this.UpdateLastLogin(userAuth.Email);
                 return true;
             }
             else
@@ -63,6 +59,25 @@ namespace Wedding.Mvc.Services
                         .FirstOrDefault();
 
             return userAuth;
+        }
+
+        public void UpdateLastLogin(string email)
+        {
+            var account = CloudStorageAccount.Parse(RoleEnvironment.GetConfigurationSettingValue("DataConnectionString"));
+            var context = account.CreateCloudTableClient().GetDataServiceContext();
+
+            var user = context.CreateQuery<UserData>("Users")
+                       .Where(u => u.PartitionKey == "wedding" &&
+                                                    u.Email == email)
+                       .FirstOrDefault();
+            if (user != null)
+            {
+                user.LastLogin = DateTime.Now;
+                context.UpdateObject(user);
+                context.SaveChangesWithRetries();
+
+                this.User = user;
+            }
         }
 
         public MembershipCreateStatus CreateUser(UserData userInfo)

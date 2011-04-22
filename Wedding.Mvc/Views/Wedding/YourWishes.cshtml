@@ -21,12 +21,15 @@
                 Si ya escribiste algun deseo y quieres modificarlo vuelve a agregarlo aquí.
             </p>
             <br />
-            <strong class="instruction">Escribenos un deseo:</strong> (220 chars maximo)
+            <strong>Escribenos un deseo:</strong> (220 chars maximo)
             <br />
+            <br />
+            <div class="instruction alignright" id="charleft"></div>
             <br />
             @using (Ajax.BeginForm("AddWish", null, new AjaxOptions { OnSuccess = "OnWishAdded" }, new { @id = "form-wish" }))
             {   
-                @Html.TextArea("comment", new { @class = "add-wish", rows = "6", cols = "1", onblur = "if(this.value.length>220)this.value=this.value.substr(0,220);" })
+                @Html.TextArea("comment", new { @class = "add-wish", rows = "6", cols = "1", onblur = "if(this.value.length>220)this.value=this.value.substr(0,220);", onkeypress = "UpdateCharsLeft(this.value.length);", onkeyup = "UpdateCharsLeft(this.value.length);" })
+                
                 <div class="alignright">
                     <a href="#" class="link" onclick="$('#comment').val('');return false;">borrar</a>
                     <a href="#" class="link" onclick="$('#form-wish').submit();return false;">enviar</a>
@@ -36,6 +39,14 @@
     </div>
 </div>
 <script type="text/javascript">
+
+    function UpdateCharsLeft(chars) {
+        if (chars > 220)
+            $('#comment').addClass('instruction');
+        else
+            $('#comment').removeClass('instruction');
+        $('#charleft').html((220 - chars).toString() + ' chars restantes');
+    }
 
     function RefreshWishes() {
         $.post('/Wedding/GetYourWishes', {},
