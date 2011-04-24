@@ -62,8 +62,6 @@ namespace Wedding.Mvc.Controllers
             var userData = UserData.FromString(userIdentity.Ticket.UserData);
 
             body = body.Trim();
-            if (!body.EndsWith("."))
-                body = body + ".";
 
             var news = new News();
             news.Title = title;
