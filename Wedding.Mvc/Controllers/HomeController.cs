@@ -65,5 +65,10 @@ namespace Wedding.Mvc.Controllers
 
             return Json(new { blobs = blobsUrl });
         }
+
+        public ActionResult Link()
+        {
+            return View();
+        }
     }
 }

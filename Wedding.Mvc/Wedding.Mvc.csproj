@@ -111,6 +111,7 @@
   <ItemGroup>
     <Content Include="Content\Images\about-us.jpg" />
     <Content Include="Content\Images\buton.gif" />
+    <Content Include="Content\Images\icon.gif" />
     <Content Include="Content\Images\link-back-bg.gif" />
     <Content Include="Content\Images\link-bg.gif" />
     <Content Include="Content\Images\logo.png" />
@@ -218,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Wedding\Music.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Link.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
