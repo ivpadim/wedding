@@ -68,6 +68,7 @@ namespace Wedding.Mvc.Controllers
                 if (this.MembershipService.AuthenticateUser(model.Account, model.Password))
                 {
                     this.FormsService.SignIn(model.Account, model.RememberMe, this.MembershipService.User.ToString());
+                    this.MembershipService.UpdateLastLogin(model.Account);
 
                     if (Url.IsLocalUrl(returnUrl))
                         return Redirect(returnUrl);

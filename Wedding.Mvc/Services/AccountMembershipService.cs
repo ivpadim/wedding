@@ -36,15 +36,9 @@ namespace Wedding.Mvc.Services
                         .FirstOrDefault();
 
 
-            if (userAuth != null)
-            {
-                this.UpdateLastLogin(userAuth.Email);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            this.User = userAuth;
+
+            return userAuth != null;
         }
 
         public UserData GetUser(string email)

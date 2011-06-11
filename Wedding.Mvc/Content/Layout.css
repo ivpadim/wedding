@@ -129,3 +129,14 @@
     width: 330px;
     margin-left: 20px;
 }
+
+#photos-page .col-1
+{
+    width: 630px;
+}
+
+#photos-page .col-2
+{
+    width: 230px;
+    margin-left: 20px;
+}
